@@ -32,16 +32,29 @@ client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 #         if "& coMPETION PlATINUM A' DESIGN AWARD" in i['words']:
 #             level = "Platinum A' Design Award/铂金奖"
 
-url = "https://p4.taihuoniao.com/image/181211/5c0faf06ce156a67f3915562"
+plat_url = "https://p4.taihuoniao.com/image/181211/5c0faf06ce156a67f3915562"
 
-""" 调用网络图片文字识别, 图片参数为远程url图片 """
-client.webImageUrl(url)
+gold_url = 'https://p4.taihuoniao.com/image/201127/5fc0846763ad80f433c90cdf'
 
-""" 如果有可选参数 """
+slver_url = 'https://p4.taihuoniao.com/image/201127/5fc0846763ad80f433c90cdf-avb2.jpg'
+
+# """ 调用网络图片文字识别, 图片参数为远程url图片 """
+# client.webImageUrl(slver_url)
+
 options = {}
 options["detect_direction"] = "true"
 options["detect_language"] = "true"
-
-""" 带参数调用网络图片文字识别, 图片参数为远程url图片 """
-res = client.webImageUrl(url, options)
-print(res)
+res = client.webImageUrl(slver_url, options)
+for i in res['words_result']:
+    if 'ULTIMATE' in i['words']:
+        level = "Ultimate A' Design Award/终极大奖"
+    elif 'PLATINUM' in i['words']:
+        level = "Platinum A' Design Award/铂金奖"
+    elif 'GOLD' in i['words']:
+        level = "Gold A' Design Award/金奖"
+    elif 'SILVER' in i['words']:
+        level = "Silver A' Design Award/银奖"
+    elif 'BRONZE' in i['words']:
+        level = "Bronze A' Design Award/铜奖"
+    elif 'IRON' in i['words']:
+        level = "A' Award Winner (Iron A' Design Award)/铁奖"

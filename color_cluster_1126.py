@@ -3,8 +3,9 @@ import os
 import numpy as np
 import shutil
 
+from PIL import Image
 
-img_dir = "image"
+img_dir = "test"
 img_dir = os.path.join(os.getcwd(), img_dir)
 result_dir = os.path.join(os.getcwd(),"Results")
 
@@ -58,9 +59,12 @@ def majoColor_inrange(image_path)-> str:
         "蓝色":[np.array([100,15,46]),np.array([124,255,255])],
         "紫色":[np.array([125,15,46]),np.array([155,255,255])]
     }
-    color = "其他" 
-    img = cv2.imread(os.path.join(image_path))
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    color = "其他"
+    image = Image.open(image_path)
+    # image.show()
+    img = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2BGR)
+    # img = cv2.imread(os.path.join(image_path))
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     other_mask = cv2.inRange(img, np.float32(color_range["白色"][0]), np.float32(color_range["白色"][1]))
     white_mask = cv2.bitwise_not(other_mask)
     [x1, x2, y1, y2] = getROI(white_mask)

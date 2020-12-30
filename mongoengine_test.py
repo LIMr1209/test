@@ -93,9 +93,9 @@ class User(Document):
     target_id = StringField()
     a = IntField(default=0)
 
-a = User.objects(_id=ObjectId("5fae05c17aec187bc94953cb")).first()
-a.name = "二货"
-a.save()
+a = User.objects(tags__in=[7]).all()
+for i in a:
+    print(i.tags)
 # a = User()
 # a.tags = [13,2]
 # a.save()
