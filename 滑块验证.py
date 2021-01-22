@@ -95,12 +95,12 @@ def slide_tracks(distance):
             a = 4
         else:
             a = -5
-        s = v * t + (1 / 2) * a * (t ** 2) # 偏移量
+        s = v * t + (1 / 2) * a * (t ** 2)  # 偏移量
         v = v + a * t  # 速度
         current += s
         forward_tracks.append(round(s))
         t += 0.05
-    back_tracks = [-4, -4, -3, -3, -2, -2, -1, -1] # 超过20 个像素 重新移动回来
+    back_tracks = [-4, -4, -3, -3, -2, -2, -1, -1]  # 超过20 个像素 重新移动回来
     # 补全差异
     diff_value = sum(forward_tracks) - distance
     if diff_value > 0:

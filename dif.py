@@ -8,3 +8,6 @@ b = [{"id":4, "year": 2020},{"id":5, "year": 2020},{"id":6, "year": 2020},{"id":
 # for i in new_prize_id:
 #     print(i)
 
+with open('c.text', 'w') as f:
+    f.write("111")
+
