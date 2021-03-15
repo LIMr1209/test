@@ -27,10 +27,7 @@
 # for e, s in enumerate(similarities, 1):
 #     print('kw 与 text%d 相似度为：%.2f' % (e, s))
 
-texts = ['吃鸡这里所谓的吃鸡并不是真的吃鸡，也不是谐音词刺激的意思',
-         '而是出自策略射击游戏《绝地求生：大逃杀》里的台词',
-         '我吃鸡翅，你吃鸡腿']
 import difflib
 def string_similar(s1, s2):
     return difflib.SequenceMatcher(None, s1, s2).quick_ratio()
-print(string_similar(texts[0], texts[1]))
+print(string_similar("果蔬干", '果蔬水果'))
