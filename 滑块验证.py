@@ -17,8 +17,8 @@ def input_account_password(browser):
     act = "//input[@id='mobile']"
     pwd = "//input[@id='password']"
     btn = "//div[@class='sign-in']/div[2]/div[4]"
-    browser.find_element_by_xpath(act).send_keys('mobile')
-    browser.find_element_by_xpath(pwd).send_keys('password')
+    browser.find_element_by_xpath(act).send_keys('17635700440')
+    browser.find_element_by_xpath(pwd).send_keys('aaa1058169464')
     browser.find_element_by_xpath(btn).click()
     time.sleep(2)
     # Waiting for loading and enter account&password

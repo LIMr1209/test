@@ -21,6 +21,7 @@
 
 
 from mongoengine import connect, Document, ListField, StringField, ObjectIdField, IntField, ReferenceField
+from mongoengine.queryset.visitor import Q
 import json
 connect('test')
 # class Card(Document):
@@ -74,23 +75,29 @@ class User(Document):
 
 # print(User.objects(name="张三").explain()) # 查询计划
 # print(User.objects(name="张三").hint('name_1')) # 指定使用索引查询
+#
+# aggregate = [
+#     {
+#         '$match':
+#             {
+#                 'name': '张三'
+#             },
+#     },
+#     {
+#     '$addFields': {
+#            'count': { "$sum": ["$a","$b"]}
+#          }
+#     },
+#     {"$sort":
+#          {"count": 1}
+#     }
+# ]
+# a = User._get_collection().aggregate(aggregate)
+# for i in a:
+#     print(i)
 
-aggregate = [
-    {
-        '$match':
-            {
-                'name': '张三'
-            },
-    },
-    {
-    '$addFields': {
-           'count': { "$sum": ["$a","$b"]}
-         }
-    },
-    {"$sort":
-         {"count": 1}
-    }
-]
-a = User._get_collection().aggregate(aggregate)
+
+
+a = User.objects(target_id='test1').only('name').filter(Q(name='张三') | Q(name='李四')).limit(1)
 for i in a:
-    print(i)
+    print(i.to_mongo())
