@@ -23,7 +23,7 @@ async def main():
     # browserWSEndpoint 获取chrome debug 端口
     # http://127.0.0.1:端口/json/version
     connect_params = {
-        'browserWSEndpoint': 'ws://127.0.0.1:9222/devtools/browser/140bbc5f-744d-4889-8476-d88949cb44b6',
+        'browserWSEndpoint': 'ws://127.0.0.1:9222/devtools/browser/e4c8d886-0c0b-46db-b04b-98eb8f008afa',
         'logLevel': 3,
     }
     browser = await connect(connect_params)
