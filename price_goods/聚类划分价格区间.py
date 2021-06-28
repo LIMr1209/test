@@ -11,6 +11,10 @@ if not os.path.exists('result/{}'.format(tag)):
 sd = pd.read_csv('{}.csv'.format(tag))
 # sd = pd.read_table()
 sd.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+print(len(sd))
+print(sd['price'].idxmax())
+print(sd.max())
+print(sd.max()['price'])
 # 画散点图（横轴：价格，纵轴：销量）#设置图框大小
 fig = plt.figure(figsize=(10, 6))
 plt.plot(sd['price'], sd['sale_count'], "o")
