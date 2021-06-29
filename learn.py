@@ -791,7 +791,7 @@ from itertools import groupby # itertool
 features = []
 res_data.sort(key=itemgetter('com_attr_name')) # 需要先排序，然后才能使用groupby
 lstg = groupby(res_data,itemgetter('com_attr_name')) # 分组
-# 等同于lstg = groupby(lst,key=lambda x:x['country'])
+# 等同于lstg = groupby(lst,key=lambda x:x['com_attr_name'])
 for com_attr_name,items in lstg:
     data = {}
     data['name'] = com_attr_name
@@ -800,4 +800,4 @@ for com_attr_name,items in lstg:
         temp = {'name': item['com_attr_value_name'], 'value': item['indexation']}
         data['value'].append(temp)
     features.append(data)
-b = 1
+print(features)

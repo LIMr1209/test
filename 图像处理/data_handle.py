@@ -2,7 +2,7 @@ import os
 
 import cv2
 
-
+# 缩放图片
 def process_image(img, min_side):
     size = img.shape
     h, w = size[0], size[1]
