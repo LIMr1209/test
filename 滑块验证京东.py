@@ -23,7 +23,7 @@ async def main():
     # browserWSEndpoint 获取chrome debug 端口
     # http://127.0.0.1:端口/json/version
     connect_params = {
-        'browserWSEndpoint': 'ws://127.0.0.1:9222/devtools/browser/e4c8d886-0c0b-46db-b04b-98eb8f008afa',
+        'browserWSEndpoint': 'ws://127.0.0.1:9222/devtools/browser/5ca1c0fe-74f8-41ba-86e3-05ab9986aea3',
         'logLevel': 3,
     }
     browser = await connect(connect_params)
@@ -34,9 +34,9 @@ async def main():
     await page.click('div.login-tab-r')
     await page.waitFor(1000)
     # 模拟人工输入用户名、密码
-    await page.type('#loginname', '123456789@163.com',
+    await page.type('#loginname', '13671306762',
                     {'delay': random.randint(60, 121)})
-    await page.type('#nloginpwd', '1234567890',
+    await page.type('#nloginpwd', 'thn#2014',
                     {'delay': random.randint(100, 151)})
     await page.waitFor(2000)
     await page.click('div.login-btn')
