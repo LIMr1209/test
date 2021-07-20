@@ -11,8 +11,8 @@ if __name__ == '__main__':
         "appPackage": "com.tencent.mm",  # app 包名
         "appActivity": "com.tencent.mm.ui.LauncherUI",  # app 启动时主 Activity
         'noReset': True,  # 是否保留 session 信息，可以避免重新登录
-        'unicodeKeyboard': True,  # 使用 unicodeKeyboard 的编码方式来发送字符串
-        'resetKeyboard': True  # 将键盘给隐藏起来
+        # 'unicodeKeyboard': True,  # 使用 unicodeKeyboard 的编码方式来发送字符串
+        # 'resetKeyboard': True  # 将键盘给隐藏起来
     }
     print(json.dumps(desired_caps))
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
