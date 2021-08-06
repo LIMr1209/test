@@ -788,16 +788,30 @@ res_data = [
 
 from operator import itemgetter # itemgetter用来去dict中的key，省去了使用lambda函数
 from itertools import groupby # itertool
-features = []
 res_data.sort(key=itemgetter('com_attr_name')) # 需要先排序，然后才能使用groupby
-lstg = groupby(res_data,itemgetter('com_attr_name')) # 分组
+lstg = groupby(res_data,key=itemgetter('com_attr_name')) # 分组
 # 等同于lstg = groupby(lst,key=lambda x:x['com_attr_name'])
-for com_attr_name,items in lstg:
-    data = {}
-    data['name'] = com_attr_name
-    data['value'] = []
-    for item in items:
-        temp = {'name': item['com_attr_value_name'], 'value': item['indexation']}
-        data['value'].append(temp)
-    features.append(data)
-print(features)
+features = [{'name': key, 'value':list(group)} for key,group in lstg]
+# features = []
+# for com_attr_name,items in lstg:
+#     data = {}
+#     data['name'] = com_attr_name
+#     data['value'] = []
+#     for item in items:
+#         temp = {'name': item['com_attr_value_name'], 'value': item['indexation']}
+#         data['value'].append(temp)
+#     features.append(data)
+
+# 自定义分组
+from itertools import groupby
+lst=[2,8,11,25,43,6,9,29,51,66]
+
+def gb(num):
+    if num <= 10:
+        return 'less'
+    elif num >=30:
+        return 'great'
+    else:
+        return 'middle'
+
+print([(k,list(g))for k,g in groupby(sorted(lst),key=gb)])

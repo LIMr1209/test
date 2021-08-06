@@ -98,6 +98,8 @@ class User(Document):
 
 
 
-a = User.objects(target_id='test1').only('name').filter(Q(name='张三') | Q(name='李四')).limit(1)
-for i in a:
+query = {'tags__0':6}
+
+user = User.objects(**query).all()
+for i in user:
     print(i.to_mongo())
