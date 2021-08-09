@@ -786,12 +786,13 @@ res_data = [
     }
 ]
 
-from operator import itemgetter # itemgetter用来去dict中的key，省去了使用lambda函数
-from itertools import groupby # itertool
-res_data.sort(key=itemgetter('com_attr_name')) # 需要先排序，然后才能使用groupby
-lstg = groupby(res_data,key=itemgetter('com_attr_name')) # 分组
+from operator import itemgetter  # itemgetter用来去dict中的key，省去了使用lambda函数
+from itertools import groupby  # itertool
+
+res_data.sort(key=itemgetter('com_attr_name'))  # 需要先排序，然后才能使用groupby
+lstg = groupby(res_data, key=itemgetter('com_attr_name'))  # 分组
 # 等同于lstg = groupby(lst,key=lambda x:x['com_attr_name'])
-features = [{'name': key, 'value':list(group)} for key,group in lstg]
+features = [{'name': key, 'value': list(group)} for key, group in lstg]
 # features = []
 # for com_attr_name,items in lstg:
 #     data = {}
@@ -804,14 +805,17 @@ features = [{'name': key, 'value':list(group)} for key,group in lstg]
 
 # 自定义分组
 from itertools import groupby
-lst=[2,8,11,25,43,6,9,29,51,66]
+
+lst = [2, 8, 11, 25, 43, 6, 9, 29, 51, 66]
+
 
 def gb(num):
     if num <= 10:
         return 'less'
-    elif num >=30:
+    elif num >= 30:
         return 'great'
     else:
         return 'middle'
 
-print([(k,list(g))for k,g in groupby(sorted(lst),key=gb)])
+
+print([(k, list(g)) for k, g in groupby(sorted(lst), key=gb)])
