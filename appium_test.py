@@ -39,4 +39,3 @@ if __name__ == '__main__':
     driver.find_element_by_id('com.tencent.mm:id/ay5').click()
     # 退出
     # driver.quit()
-

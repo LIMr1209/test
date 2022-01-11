@@ -88,7 +88,6 @@ def my_callback(future):
 # loop.run_until_complete(wait_coro)
 
 
-
 async def main():
     task = asyncio.ensure_future(coroutine_example("test"))
     print(task.done())

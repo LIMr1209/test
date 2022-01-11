@@ -23,7 +23,7 @@ class RedisHandle(object):
 
 if __name__ == '__main__':
     RH = RedisHandle('localhost', '6379')
-    RH.insert('jd','page',2)
+    RH.insert('jd', 'page', 2)
     RH.insert('jd', 'keyword', "水壶")
     print(int(RH.query('jd', 'page')))
-    print(RH.verify('jd','page'))
+    print(RH.verify('jd', 'page'))

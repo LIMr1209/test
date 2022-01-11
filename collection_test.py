@@ -1,6 +1,5 @@
 import json
-from collections import OrderedDict,Counter, deque, defaultdict, namedtuple
-
+from collections import OrderedDict, Counter, deque, defaultdict, namedtuple
 
 # 有序字典 OrderedDict
 # 排序的字段。父类为Python内置的dict
@@ -53,7 +52,6 @@ for word in morewords:
     word_counts[word] += 1
 print(word_counts['eyes'])
 
-
 # 双端队列 deque 用途：双端队列，头部和尾部都能以O(1)时间复杂度插入和删除元素。类似于列表的容器
 # 头部插入与删除的时间复杂度为O(1)，
 d = deque()
@@ -80,8 +78,6 @@ d3.append(2)
 print(d3)
 d3.append(3)
 print(d3)
-
-
 
 # defaultdict  带有默认值的字典。父类为Python内置的dict
 # defaultdict  的一个特征是它会自动初始化每个 key 刚开始对应的值，所以你只需要 关注添加元素操作了。比如：
@@ -120,7 +116,6 @@ for website in websites:
     print(website.name)
     print(website.founder)
 
-
 # ChainMap 创建多个可迭代对象的集合。类字典类型
 
 a = {'x': 1, 'z': 3}
@@ -139,7 +134,7 @@ a['x'] = 11  # 使用ChainMap时，原字典做了更新，这种更新会合并
 print(c)  # 按顺序合并两个字典
 print(c['x'])
 print(c['y'])
-print(c['z']) # 按顺序获取字典元素
+print(c['z'])  # 按顺序获取字典元素
 
 # 对于字典的更新或删除操作影响的总是列中的第一个字典。
 c['z'] = 10
@@ -164,4 +159,3 @@ print(values)
 print(values['x'])
 values = values.parents
 print(values)
-

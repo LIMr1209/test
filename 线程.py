@@ -27,3 +27,11 @@ thread_02.join()
 end = time.perf_counter()
 print(end - start)
 print(number)
+
+# 使用 celery 默认 prefork
+# daemonic processes are not allowed to have children
+# 使用 from billiard.context import Process 可以解决创建多进程，但无法使用共享变量
+# 使用 celery 协程 gevent  打补丁 出现进程错乱
+# Resource temporarily unavailable
+
+# 使用threads blender defunct

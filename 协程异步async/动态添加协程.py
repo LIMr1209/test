@@ -194,7 +194,7 @@ class AsyncPool(object):
         # thread_pool.start()
 
         # 启动子线程
-        thread_pool.submit(self._start_thread_loop, loop) # 运行线程池 同时 协程开始启动
+        thread_pool.submit(self._start_thread_loop, loop)  # 运行线程池 同时 协程开始启动
 
         return loop, thread_pool, thread_pool
 
@@ -298,7 +298,6 @@ class AsyncPool(object):
         future.add_done_callback(self.task_done)
 
 
-
 async def thread_example2(i):
     await asyncio.sleep(1)
     return i
@@ -335,7 +334,6 @@ def demo():
     # pool.release()
     #
     pool.wait()
-
 
     # 进度条使用
     # while True:

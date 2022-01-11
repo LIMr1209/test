@@ -19,11 +19,13 @@
 #         s.abort_transaction()
 
 
-
 from mongoengine import connect, Document, ListField, StringField, ObjectIdField, IntField, ReferenceField
 from mongoengine.queryset.visitor import Q
 import json
+
 connect('test')
+
+
 # class Card(Document):
 #     meta = {
 #         "id_field": "_id",
@@ -37,8 +39,8 @@ class User(Document):
     meta = {
         "id_field": "_id",
         'strict': True,
-        'indexes':['+name'], # 索引名
-        'auto_create_index': False, # 禁止自动创建索引
+        'indexes': ['+name'],  # 索引名
+        'auto_create_index': False,  # 禁止自动创建索引
     }
     _id = ObjectIdField()
     tags_test = ListField(default=[])
@@ -48,6 +50,7 @@ class User(Document):
     a = IntField(default=0)
     b = IntField(default=0)
     # c = ReferenceField(Card)
+
 
 # User.create_index('name',True) # 创建索引  不推荐
 # User.drop_collection() # 删除数据库集合
@@ -97,8 +100,7 @@ class User(Document):
 #     print(i)
 
 
-
-query = {'tags__0':6}
+query = {'tags__0': 6}
 
 user = User.objects(**query).all()
 for i in user:

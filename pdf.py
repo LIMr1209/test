@@ -1,4 +1,5 @@
 import site
+
 site.addsitedir("../../../PDFNetC/Lib")
 import sys
 from PDFNetPython3 import *
@@ -7,7 +8,8 @@ from PDFNetPython3 import *
 input_path = ""
 output_path = ""
 
-#------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
 # The following sample illustrates how to use the PDF.Convert utility class
 # to convert MS Office files to PDF
 #
@@ -16,7 +18,7 @@ output_path = ""
 # the same whether on Windows, Linux or Android.
 #
 # Please contact us if you have any questions.
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 def SimpleDocxConvert(input_filename, output_filename):
     # Start with a PDFDoc (the conversion destination)
@@ -29,13 +31,14 @@ def SimpleDocxConvert(input_filename, output_filename):
     pdfdoc.Save(output_path + output_filename, SDFDoc.e_linearized)
 
     # And we're done!
-    print("Saved " + output_filename )
+    print("Saved " + output_filename)
+
 
 def FlexibleDocxConvert(input_filename, output_filename):
     # Start with a PDFDoc (the conversion destination)
-    pdfdoc =  PDFDoc()
+    pdfdoc = PDFDoc()
 
-    options =  OfficeToPDFOptions()
+    options = OfficeToPDFOptions()
 
     # set up smart font substitutions to improve conversion results
     # in situations where the original fonts are not available
@@ -60,20 +63,21 @@ def FlexibleDocxConvert(input_filename, output_filename):
         # print("Status: " + str(conversion.GetProgress()*100) + "%, " +
         # conversion.GetProgressLabel() )
 
-    if(conversion.GetConversionStatus() == DocumentConversion.eSuccess):
+    if (conversion.GetConversionStatus() == DocumentConversion.eSuccess):
         num_warnings = conversion.GetNumWarnings()
         # print information about the conversion
         i = 0
         for i in range(num_warnings):
-            print("Conversion Warning: " + conversion.GetWarningString(i) )
+            print("Conversion Warning: " + conversion.GetWarningString(i))
             i = i + 1
 
         # save the result
         pdfdoc.Save(output_path + output_filename, SDFDoc.e_linearized)
         # done
-        print("Saved " + output_filename )
+        print("Saved " + output_filename)
     else:
-        print("Encountered an error during conversion: " + conversion.GetErrorString() )
+        print("Encountered an error during conversion: " + conversion.GetErrorString())
+
 
 def main():
     # The first step in every application using PDFNet is to initialize the
@@ -89,6 +93,7 @@ def main():
     FlexibleDocxConvert("项目管理工具快速入门.docx", "the_rime_of_the_ancient_mariner.pdf")
 
     print("Done.")
+
 
 if __name__ == '__main__':
     main()

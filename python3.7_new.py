@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+
 # 内置的 “断点” breakpoint()
 def guess(target):
     user_guess = "100"

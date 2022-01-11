@@ -23,22 +23,22 @@ def change(arr):
         arr[i] = 1
 
 
-# if __name__ == '__main__':
-    # lock = multiprocessing.Lock()
-    # num = multiprocessing.Value('i', 0)
-    # arr = multiprocessing.Array('i', range(10))
-    #
-    # print(arr[:])
-    # p1 = multiprocessing.Process(target=add, args=(num, 1, lock))
-    # p3 = multiprocessing.Process(target=add, args=(num, 3, lock))
-    # p = multiprocessing.Process(target=change, args=(arr,))
-    # p3.start()
-    # p1.start()
-    # p.start()
-    # p.join()
-    # print(arr[:])
-    #
-    # print('main end...')
+if __name__ == '__main__':
+    lock = multiprocessing.Lock()
+    num = multiprocessing.Value('i', 0)
+    arr = multiprocessing.Array('i', range(10))
+
+    print(arr[:])
+    p1 = multiprocessing.Process(target=add, args=(num, 1, lock))
+    p3 = multiprocessing.Process(target=add, args=(num, 3, lock))
+    p = multiprocessing.Process(target=change, args=(arr,))
+    p3.start()
+    p1.start()
+    p.start()
+    p.join()
+    print(arr[:])
+
+    print('main end...')
 
 # 先执行进程p3并加锁，p3执行过程中进程p执行，因为p没有调用锁且使用了join()方法，阻塞了其它进程，只有当p执行完成后
 # p3才会继续执行，p3执行完成后，p1抢到锁并执行
