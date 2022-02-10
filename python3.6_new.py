@@ -16,10 +16,10 @@ b = 0x_FF_FF_FF
 
 from typing import List, Dict
 
-a : List[int] = [1]
-b : List[int] = ["bbb"]
-c : List[int] #
-d : Dict[str, int] = {"a":1}
+a: List[int] = [1]
+b: List[int] = ["bbb"]
+c: List[int]  #
+d: Dict[str, int] = {"a": 1}
 
 
 # 异步生成器
@@ -27,6 +27,7 @@ async def test():
     for i in range(5):
         yield i
         await asyncio.sleep(2)
+
 
 async def main():
     res = test()
@@ -37,6 +38,7 @@ async def main():
     # or
     b = await res.__anext__()
     return b
+
 
 # 1
 # tasks = [main()]
@@ -53,6 +55,7 @@ async def main():
 async def test_1():
     task = [await main() for i in range(5)]
     print(task)
+
 
 # asyncio.get_event_loop().run_until_complete(test_1())
 

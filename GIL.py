@@ -7,9 +7,11 @@
 
 import threading
 
+
 def dead_loop():
     while True:
         pass
+
 
 # 新起一个死循环线程
 t = threading.Thread(target=dead_loop)

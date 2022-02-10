@@ -60,32 +60,39 @@ a = {'a': 1, 'b': 2}
 for i in a.items().__reversed__():  # 反向迭代字典
     print(i)
 
-
 # lru_cache
 import time
+
 
 def fib(n):
     if n == 0 or n == 1:
         return 1
     return fib(n - 2) + fib(n - 1)
 
+
 start_1 = time.perf_counter()
 fib(30)
 # 如果要求斐波拉契数列的第50项，调用fib(50)可能就要等到地老天荒了，因为有大量已经计算过的值被重新算了一遍，而这个重新算的次数随着n的增长是指数级别的，耗费了大量时间。所以我们一般会先用一个dict来cache一下数据，像这样
 
 dic = {0: 1, 1: 1}
+
+
 def fib_dict(n):
-    if item:=dic.get(n):
+    if item := dic.get(n):
         return item
-    dic[n-2],dic[n-1] = fib(n-2), fib(n-1)
-    return dic[n-2]+dic[n-1]
+    dic[n - 2], dic[n - 1] = fib(n - 2), fib(n - 1)
+    return dic[n - 2] + dic[n - 1]
+
+
 fib_dict(30)
+
 
 # 使用 lru_cache
 @lru_cache
 def fib_cache(n):
     if n == 0 or n == 1:
         return 1
-    return fib(n-2)+fib(n-1)
+    return fib(n - 2) + fib(n - 1)
+
 
 fib_cache(30)
