@@ -1,4 +1,4 @@
-from aip import AipImageClassify
+# from aip import AipImageClassify
 import cv2
 import math
 import numpy as np

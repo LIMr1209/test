@@ -49,5 +49,6 @@ async def test_for():
     async for i in a:
         print(i)
 
-
-# asyncio.run(test_for())
+print(222)
+asyncio.run(test_for())
+print(111)

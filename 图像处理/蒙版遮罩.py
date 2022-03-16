@@ -59,8 +59,8 @@ class MatteMatting():
             img2 = cv2.bitwise_not(self.img2)  # 黑白翻转
             image = cv2.add(self.img1, img2)
             image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))  # OpenCV转换成PIL.Image格式
-            img = self.__transparent_back(image)
-            img.save(path)
+            # img = self.__transparent_back(image)
+            image.save(path)
 
     @staticmethod
     def __image_to_opencv(image):
@@ -69,5 +69,5 @@ class MatteMatting():
 
 
 if __name__ == '__main__':
-    mm = MatteMatting("2.jpg", "1.jpg")
+    mm = MatteMatting("1.png", "2.png")
     mm.save_image("output.png", mask_flip=True)  # mask_flip是指蒙版翻转，即把白色的变成黑色的，黑色的变成白色的
