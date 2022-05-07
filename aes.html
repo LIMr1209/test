@@ -1,49 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
 <body>
+    <input type="file" id="fileInput">
     <script src="./crypto-js-4.1.1/crypto-js.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script>
-    function getAesString(data, key, iv) { //加密
-        var key = CryptoJS.enc.Utf8.parse(key);
-        var iv = CryptoJS.enc.Utf8.parse(iv);
-        var encrypted = CryptoJS.AES.encrypt(data, key, {
-            iv: iv,
-            mode: CryptoJS.mode.CBC,
-            padding: CryptoJS.pad.Pkcs7
-        });
-        return encrypted.toString(); //返回的是base64格式的密文
+    function uploadfile(fileBlob, name){
+        var formData = new FormData();
+        formData.append('file', fileBlob);
+        $.ajax({
+           url:"http://192.168.3.12:8006/api/upload_test",
+           type:"post",
+           data:formData,
+           processData:false,
+           contentType:false,
+           success:function(res){
+            if(res){
+             alert("上传成功！");
+            }
+           },
+           error:function(err){
+            alert("网络连接失败,稍后重试",err);
+           }
+
+        })
     }
-
-    function getDAesString(encrypted, key, iv) { //解密
-        var key = CryptoJS.enc.Utf8.parse(key);
-        var iv = CryptoJS.enc.Utf8.parse(iv);
-        var decrypted = CryptoJS.AES.decrypt(encrypted, key, {
-            iv: iv,
-            mode: CryptoJS.mode.CBC,
-            padding: CryptoJS.pad.Pkcs7
-        });
-        return decrypted.toString(CryptoJS.enc.Utf8);
+    function blobSlice(blob, start, length) {
+        if(blob.slice) {
+            return blob.slice(start, length);
+        } else if (blob.webkitSlice) {
+            return blob.webkitSlice(start, length);
+        } else if (blob.mozSlice) {
+            return blob.mozSlice(start, length);
+        } else {
+            return null;
+        }
     }
-
-    function getAES(data) { //加密
-        var key = '12345678910Asdfx'; //密钥
-        var iv = '12345678910Asdfx';
-        var encrypted = getAesString(data, key, iv); //密文
-        var encrypted1 = CryptoJS.enc.Utf8.parse(encrypted);
-        return encrypted;
+    ArrayBufferToWordArray = arrayBuffer => {
+        const u8 = new Uint8Array(arrayBuffer, 0, arrayBuffer.byteLength);
+        const len = u8.length;
+        const words = [];
+        for (let i = 0; i < len; i += 1) {
+            words[i >>> 2] |= (u8[i] & 0xff) << (24 - (i % 4) * 8);
+        }
+        return CryptoJS.lib.WordArray.create(words, len);
     }
-
-    function getDAes(data) { //解密
-        var key = '12345678910Asdfx'; //密钥
-        var iv = '12345678910Asdfx'; //密钥偏移量
-        var decryptedStr = getDAesString(data, key, iv);
-        return decryptedStr;
+    WordArrayToArrayBuffer = wordArray => {
+        const { words } = wordArray;
+        const { sigBytes } = wordArray;
+        const u8 = new Uint8Array(sigBytes);
+        for (let i = 0; i < sigBytes; i += 1) {
+            const byte = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+            u8[i] = byte;
+        }
+        return u8;
     }
-
-    var AES = getAES('hello');
-    var AFTERAES = getDAes(AES);
-    console.log('加密后:' + AES );
-    console.log('解密后:' + AFTERAES );
-
+    AESEncData = (data, key, iv) => { // 这里的data是WordBuffer类型的数据
+        // const bKey = CryptoJS.enc.Hex.parse(key);
+        const bKey = CryptoJS.enc.Utf8.parse(key);
+        // const bIv = CryptoJS.enc.Hex.parse(iv);
+        const bIv = CryptoJS.enc.Utf8.parse(iv);
+        const encrypt = CryptoJS.AES.encrypt(data, bKey, { iv: bIv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
+        console.log("加密后:", encrypt.ciphertext)
+        const arrayBuffer = WordArrayToArrayBuffer(encrypt.ciphertext);
+        return arrayBuffer;
+    }
+    AESDecData = (data, key, iv) => { // 这里的data是WordBuffer类型的数据
+        // const bKey = CryptoJS.enc.Hex.parse(key);
+        const bKey = CryptoJS.enc.Utf8.parse(key);
+        // const bIv = CryptoJS.enc.Hex.parse(iv);
+        const bIv = CryptoJS.enc.Utf8.parse(iv);
+        const decrypt = CryptoJS.AES.decrypt({ ciphertext: data }, bKey, { iv: bIv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
+        console.log("解密后:", decrypt)
+        const arrayBuffer = WordArrayToArrayBuffer(decrypt);
+        return arrayBuffer;
+    }
+    document.getElementById('fileInput').addEventListener('change', function selectedFileChanged() {
+        const reader = new FileReader();
+        // var blob = blobSlice(this.files[0], 0, 16)
+        reader.onload = function fileReadCompleted() {
+            // 当读取完成时，内容只在`reader.result`中
+            arrayBuffer = reader.result
+            console.log(arrayBuffer)
+            console.log(new Blob([reader.result]))
+            var wordArray = ArrayBufferToWordArray(arrayBuffer);
+            const AESKey = 'lizhenbinhhahaha';
+            const AESIv = 'lizhenbinhhahaha';
+            const encData = AESDecData(wordArray, AESKey, AESIv);
+            console.log(wordArray)
+            console.log(encData)
+            const fileBlob = new Blob([encData], { type: 'application/txt' });
+            uploadfile(fileBlob, 'test.gltf');
+          };
+        reader.readAsArrayBuffer(this.files[0]);
+    });
     </script>
 </body>
-
 </html>
