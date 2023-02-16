@@ -37,9 +37,9 @@ class AsyncIterable:
         return self
 
     async def __anext__(self):
-        self.index += 1
-        if self.index < self.length:
-            return self.data[self.index]
+        data = await self.fetch_data()
+        if data != None:
+            return data
         else:
             raise StopAsyncIteration()
 

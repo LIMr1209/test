@@ -76,16 +76,17 @@ def my_callback(future):
 # wait_coro = asyncio.wait(tasks)
 # asyncio.run(wait_coro)
 
-# loop = asyncio.get_event_loop()
-# tasks = []
-# for i in range(3):
-#     # task = asyncio.ensure_future(coroutine_example('Zarten_' + str(i)), loop=loop)
-#     task = loop.create_task(coroutine_example('Zarten_' + str(i)))
-#     task.add_done_callback(my_callback)
-#     tasks.append(task)
-#
-# wait_coro = asyncio.wait(tasks)
-# loop.run_until_complete(wait_coro)
+loop = asyncio.get_event_loop()
+tasks = []
+for i in range(3):
+    # task = asyncio.ensure_future(coroutine_example('Zarten_' + str(i)), loop=loop)
+    task = loop.create_task(coroutine_example('Zarten_' + str(i)))
+    task.add_done_callback(my_callback)
+    tasks.append(task)
+wait_coro = asyncio.wait(tasks)
+# loop.run_forever() // 使用loop.run_forever()启动无限循环时，task实例会自动加入事件循环。
+# futures = asyncio.run_coroutine_threadsafe(wait_coro,loop)
+loop.run_until_complete(wait_coro)
 
 
 async def main():

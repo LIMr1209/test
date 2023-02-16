@@ -153,6 +153,7 @@ class AsyncPool(object):
         # 将当前上下文的事件循环设置为循环。
         asyncio.set_event_loop(loop)
         # 开始事件循环
+        # 使用loop.run_forever()启动无限循环时，task实例会自动加入事件循环。
         loop.run_forever()
 
     async def _stop_thread_loop(self, loop_time=1):
