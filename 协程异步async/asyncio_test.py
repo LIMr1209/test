@@ -43,8 +43,8 @@ async def coroutine_example(name):
     return name
 
 
-# asyncio.get_event_loop().run_until_complete(coroutine_example()) #python 3.6
-# asyncio.run(coroutine_example()) # python3.7
+# asyncio.get_event_loop().run_until_complete(coroutine_example("lizhenbin")) #python 3.6
+# asyncio.run(coroutine_example("lizhenbin")) # python3.7
 
 # 手动获取返回值
 # loop = asyncio.get_event_loop()
@@ -139,12 +139,14 @@ async def c4():
 
 
 async def c5():
+    """3秒正确写法"""
     task = asyncio.ensure_future(b())
     await a()
     await task
 
 
 async def c6():
+    """3秒正确写法"""
     loop = asyncio.get_event_loop()
     task = loop.create_task(b())
     await a()

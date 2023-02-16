@@ -30,7 +30,6 @@ def upload():
         for i, image in enumerate(data):
             task.append(upload_core(i))
         loop.run_until_complete(asyncio.wait(task))
-        asyncio.run(asyncio.wait(task))
         page += 1
         print(time.time() - start)
         if page == 10:

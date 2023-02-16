@@ -14,7 +14,7 @@ class AsyncManagerText:
 
 async def test_with():
     a = AsyncManagerText('1111')
-    async with  a as file:
+    async with a as file:
         file.write('111')
 
 
@@ -49,6 +49,5 @@ async def test_for():
     async for i in a:
         print(i)
 
-print(222)
+
 asyncio.run(test_for())
-print(111)

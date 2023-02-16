@@ -2,7 +2,7 @@ import asyncio
 import aiofiles
 
 
-async def wirte_demo():
+async def write_demo():
     # 异步方式执行with操作,修改为 async with
     async with aiofiles.open("text.txt", "a", encoding="utf-8") as fp:
         await fp.write("hello world ")
@@ -25,7 +25,7 @@ async def read2_demo():
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     task = []
-    task.append(wirte_demo())
+    task.append(write_demo())
     task.append(read_demo())
     task.append(read2_demo())
     loop.run_until_complete(asyncio.wait(task))

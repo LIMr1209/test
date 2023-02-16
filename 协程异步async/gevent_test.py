@@ -5,7 +5,7 @@ monkey.patch_socket()
 
 
 def f1(i):
-    gevent.sleep(300)
+    gevent.sleep(5)
     print('this is ' + str(i))
 
 

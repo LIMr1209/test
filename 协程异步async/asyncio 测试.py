@@ -37,7 +37,7 @@ if __name__ == '__main__':
     loop = asyncio.new_event_loop()
     loop.set_default_executor(pool)
     pool.submit(start_loop, loop)
-    lock = asyncio.Lock(loop=loop) # 锁 同步执行
+    lock = asyncio.Lock(loop=loop)  # 锁 同步执行
     for i in range(10):
         # asyncio.run_coroutine_threadsafe(async_thread_pool_func(func, i, loop),loop)
         futures = asyncio.run_coroutine_threadsafe(async_func(i),loop)
