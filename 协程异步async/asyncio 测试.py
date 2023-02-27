@@ -8,6 +8,7 @@ def func(sleep):
     time.sleep(sleep)
     print(f"结束 {sleep}")
 
+
 async def async_func(sleep):
     print(f"{sleep = }")
     await asyncio.sleep(sleep)
@@ -23,9 +24,11 @@ async def async_func(sleep):
 async def async_thread_pool_func(func, sleep, loop):
     return await loop.run_in_executor(None, func, sleep)
 
+
 def back(res):
     if res.result() == 9:
         loop.stop()
+
 
 def start_loop(loop):
     asyncio.set_event_loop(loop)
