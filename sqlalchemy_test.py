@@ -8,6 +8,7 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 from sqlalchemy import select
+from sqlalchemy.orm import sessionmaker, scoped_session
 
 
 class Base(DeclarativeBase):
