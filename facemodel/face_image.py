@@ -4,13 +4,13 @@ import pathlib
 import pdb
 import re
 
-path = "/home/limr/Downloads/测试首页图片11正式服v1.0.3"
+path = "/home/limr/Downloads/0602演示图片"
 
-base_url = "http://10.25.20.15:8000"
+base_url = "http://10.25.20.11:8000"
 
 def post_image(filepath, name, cue_word):
     response = requests.post(url="{}/admin/face_image_auto/save".format(base_url), files={'file': open(filepath, 'rb')},
-                             data={"name": name, "cue_word": cue_word}, headers={"cookie":"session=0e9071e0-5dbf-4034-9521-379f23290790.aS1Xp-otLaQAPYksAiiJgki-qtM"})
+                             data={"name": name, "cue_word": cue_word}, headers={"cookie":"session=1533a956-45b1-4da2-9a5e-eaa19fbe428a.6fapPl8jsS1012WwIlCl7PFwQKQ"})
     if response.status_code != 200:
         return 0
     else:
@@ -46,7 +46,7 @@ def func(dir_path):
 
 def new_post_image(filepath, name):
     response = requests.post(url="{}/admin/face_image_auto/save_sd".format(base_url), files={'file': open(filepath, 'rb')},
-                             data={"name": name}, headers={"cookie":"session=e1f70a5b-57b7-44ac-8194-37e1e5c91c7e.q1VsTc1ElUFvbh3D0V7qPHeCIY4"})
+                             data={"name": name}, headers={"cookie":"session=1533a956-45b1-4da2-9a5e-eaa19fbe428a.6fapPl8jsS1012WwIlCl7PFwQKQ"})
     print(response)
     if response.status_code != 200:
         return 0
@@ -77,4 +77,4 @@ def new_func(dir_path):
 
 
 if __name__ == '__main__':
-    func(pathlib.Path(path))
+    new_func(pathlib.Path(path))
