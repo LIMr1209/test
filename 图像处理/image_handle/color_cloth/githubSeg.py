@@ -117,7 +117,7 @@ def rgb2hex(rgb):
     return color
 
 
-def cloth_color(image_path='images/10.jpg', expected_size=40, in_clusters=3, out_clusters=3, final_size=300):
+def cloth_color(image_path='衣服/10.jpg', expected_size=40, in_clusters=3, out_clusters=3, final_size=300):
     initial_image = cv2.imread(image_path)
     cv2.imshow('ai', initial_image)
     cv2.waitKey(0)
@@ -197,7 +197,7 @@ def cloth_color(image_path='images/10.jpg', expected_size=40, in_clusters=3, out
     #         for key in count_border_labels:
     #             prop_border = float(count_border_labels[key]) / len(border_labels)
     #
-    #             # if the color appears more in the center, it belongs to the cloth
+    #             # if the color appears more in the center, it belongs to the 衣服
     #             # else is background
     #             if prop_in > prop_border:
     #                 continue
@@ -236,7 +236,7 @@ def cloth_color(image_path='images/10.jpg', expected_size=40, in_clusters=3, out
     #     proportions = []
     #     total_color = 0
     #
-    #     # if the cloth is of the same color that the background, takes the more common color
+    #     # if the 衣服 is of the same color that the background, takes the more common color
     #     if num_valid == 0:
     #         pos = max(count_in_labels, key=count_in_labels.get)
     #         colors = [in_means[pos]]

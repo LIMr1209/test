@@ -47,7 +47,7 @@ class ImageExtractor(object):
         image_array = np.asarray(self.image)
         shape = image_array.shape
         # This will `unstack` the original array into a linear fashion.
-        # scipy.product(shape[:2]) get the total number of points in the images
+        # scipy.product(shape[:2]) get the total number of points in the 衣服
         # reshape(x, 3) reshape the current 3d-array from h*w*3 => (h*w)*3
         self.image_array = image_array.reshape(scipy.product(shape[:2]), shape[2]).astype(float)
 

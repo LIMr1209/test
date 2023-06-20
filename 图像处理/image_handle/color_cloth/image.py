@@ -15,7 +15,7 @@ def get_file_content(filePath):
         return fp.read()
 
 
-image = get_file_content('images/1.jpg')
+image = get_file_content('衣服/1.jpg')
 
 """ 调用图像主体检测 """
 client.objectDetect(image)
