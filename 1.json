@@ -1,0 +1,5279 @@
+{
+    "33": {
+        "offsets": [
+            {
+                "count": 5112,
+                "start": 0,
+                "materialIndex": 0,
+                "polygonSize": 3,
+                "index": 0
+            }
+        ],
+        "vertex_attributes": {
+            "skin_indices": {
+                "fileOffset": 10224,
+                "generated": false,
+                "count": 1016,
+                "value_size": 4,
+                "size_uncompressed": 16256
+            },
+            "tangents": {
+                "fileOffset": 26480,
+                "generated": true,
+                "count": 1016,
+                "value_size": 4,
+                "size_uncompressed": 16256
+            },
+            "skin_weights": {
+                "fileOffset": 42736,
+                "generated": false,
+                "count": 1016,
+                "value_size": 4,
+                "size_uncompressed": 16256
+            },
+            "positions": {
+                "fileOffset": 58992,
+                "generated": false,
+                "count": 1016,
+                "value_size": 3,
+                "size_uncompressed": 12192
+            },
+            "uvs1": {
+                "fileOffset": 71184,
+                "generated": false,
+                "count": 1016,
+                "value_size": 2,
+                "size_uncompressed": 8128
+            },
+            "normals": {
+                "fileOffset": 79312,
+                "generated": false,
+                "count": 1016,
+                "value_size": 3,
+                "size_uncompressed": 12192
+            }
+        },
+        "bones": [
+            "Hips",
+            "Spine",
+            "Spine1",
+            "Spine2",
+            "Neck",
+            "Head",
+            "HeadTop_End",
+            "LeftShoulder",
+            "LeftArm",
+            "LeftForeArm",
+            "LeftHand",
+            "LeftHandThumb1",
+            "LeftHandThumb2",
+            "LeftHandThumb3",
+            "LeftHandThumb4",
+            "LeftHandIndex1",
+            "LeftHandIndex2",
+            "LeftHandIndex3",
+            "LeftHandIndex4",
+            "LeftHandMiddle1",
+            "LeftHandMiddle2",
+            "LeftHandMiddle3",
+            "LeftHandMiddle4",
+            "LeftHandRing1",
+            "LeftHandRing2",
+            "LeftHandRing3",
+            "LeftHandRing4",
+            "LeftHandPinky1",
+            "LeftHandPinky2",
+            "LeftHandPinky3",
+            "LeftHandPinky4",
+            "RightShoulder",
+            "RightArm",
+            "RightForeArm",
+            "RightHand",
+            "RightHandThumb1",
+            "RightHandThumb2",
+            "RightHandThumb3",
+            "RightHandThumb4",
+            "RightHandIndex1",
+            "RightHandIndex2",
+            "RightHandIndex3",
+            "RightHandIndex4",
+            "RightHandMiddle1",
+            "RightHandMiddle2",
+            "RightHandMiddle3",
+            "RightHandMiddle4",
+            "RightHandRing1",
+            "RightHandRing2",
+            "RightHandRing3",
+            "RightHandRing4",
+            "RightHandPinky1",
+            "RightHandPinky2",
+            "RightHandPinky3",
+            "RightHandPinky4",
+            "LeftUpLeg",
+            "LeftLeg",
+            "LeftFoot",
+            "LeftToeBase",
+            "LeftToe_End",
+            "RightUpLeg",
+            "RightLeg",
+            "RightFoot",
+            "RightToeBase",
+            "RightToe_End"
+        ],
+        "bind_pose": {
+            "RightHandPinky1": {
+                "position": [
+                    -4.516070323265645,
+                    -8.710053338502872,
+                    -0.9105260706299334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle1": {
+                "position": [
+                    4.94550605524575,
+                    -7.742564099562813,
+                    4.117810415908209
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToeBase": {
+                "position": [
+                    0.2524154602782893,
+                    -8.438617523553079,
+                    12.258549016196497
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine1": {
+                "position": [
+                    -6.503797720691914e-7,
+                    12.97779779160875,
+                    -1.3681445277779423
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex4": {
+                "position": [
+                    -0.20628371401495116,
+                    -3.0929159675059172,
+                    1.357147157130088
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine2": {
+                "position": [
+                    -0.0000032160235082388522,
+                    12.00627708525816,
+                    -2.0534572279321472
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex2": {
+                "position": [
+                    1.3070891454510092,
+                    -3.8022535238496142,
+                    1.9483582072652863
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex3": {
+                "position": [
+                    0.2830564635594045,
+                    -2.5010986050717885,
+                    1.303448571908689
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex1": {
+                "position": [
+                    4.425998781787406,
+                    -6.764182931976221,
+                    6.527236999474679
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHand": {
+                "position": [
+                    13.99355446008012,
+                    -18.88336720182671,
+                    9.082776102723676
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightShoulder": {
+                "position": [
+                    -4.713551804577378,
+                    14.028309437956919,
+                    -1.6807404216277657
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Neck": {
+                "position": [
+                    -0.0000076170483494185216,
+                    15.513799709683953,
+                    -1.1650191609950122
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb2": {
+                "position": [
+                    -0.5930467482744247,
+                    -1.9990987649200491,
+                    3.574510779755604
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Head": {
+                "position": [
+                    -0.00000866823265233562,
+                    11.585984412805518,
+                    4.0206784642023035
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHand": {
+                "position": [
+                    -13.99379427748255,
+                    -18.88315892025351,
+                    9.08272196740162
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex3": {
+                "position": [
+                    -0.2830758011144355,
+                    -2.5011117914698815,
+                    1.3034698686128898
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky4": {
+                "position": [
+                    0.20054659422564214,
+                    -2.51415526006258,
+                    0.7539494617103517
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftArm": {
+                "position": [
+                    11.879689577590042,
+                    -0.47905766241171927,
+                    -0.06648887827101337
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightLeg": {
+                "position": [
+                    -3.0152328197275877,
+                    -45.714069869411865,
+                    -0.5990969355213059
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky3": {
+                "position": [
+                    -0.314730916286436,
+                    -2.182177234806204,
+                    0.38191128879354175
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky2": {
+                "position": [
+                    -0.9847912609191384,
+                    -2.637336063950045,
+                    0.00982651106604937
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex2": {
+                "position": [
+                    -1.3071479923832714,
+                    -3.8022187151095745,
+                    1.948348564371431
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb3": {
+                "position": [
+                    -0.17508130439680517,
+                    -2.595001756848632,
+                    1.5905098002597224
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex1": {
+                "position": [
+                    -4.426090609340797,
+                    -6.764212404749273,
+                    6.527218988335111
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToe_End": {
+                "position": [
+                    -0.31187101180385585,
+                    -0.5787343827510639,
+                    9.885672121391611
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb4": {
+                "position": [
+                    -0.09601331841632542,
+                    -3.2736326189067033,
+                    1.3131550378199872
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftForeArm": {
+                "position": [
+                    14.370659699692293,
+                    -24.534339741923443,
+                    -2.1289230327188253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightForeArm": {
+                "position": [
+                    -14.371027514751097,
+                    -24.534091263830437,
+                    -2.128950884240856
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftLeg": {
+                "position": [
+                    3.0151363097712367,
+                    -45.71406615971351,
+                    -0.5991057010263744
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb1": {
+                "position": [
+                    0.020579412230262047,
+                    -1.7167483978922888,
+                    3.838357922416918
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToeBase": {
+                "position": [
+                    -0.2521905069211758,
+                    -8.438611173827471,
+                    12.258562847749998
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb3": {
+                "position": [
+                    0.1749957109853,
+                    -2.5949883713647353,
+                    1.5905027428847751
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine": {
+                "position": [
+                    -5.602426606496505e-8,
+                    9.842117729037483,
+                    0.3196032483306082
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftUpLeg": {
+                "position": [
+                    9.534386723315672,
+                    0.5297222012384851,
+                    -0.3127019459199584
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftFoot": {
+                "position": [
+                    2.664914328123532,
+                    -44.09909065543218,
+                    -4.273668386751656
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle4": {
+                "position": [
+                    -0.7866446384159718,
+                    -3.2254776459936494,
+                    0.9607312218943028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing4": {
+                "position": [
+                    0.15574322880327435,
+                    -2.8706635373812333,
+                    0.7894000860806346
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle2": {
+                "position": [
+                    1.895369641780512,
+                    -3.846730461967525,
+                    1.5789422552899095
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing2": {
+                "position": [
+                    -1.6647811927307432,
+                    -3.7523581891495885,
+                    0.8394972850856622
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing1": {
+                "position": [
+                    -4.8801913930519385,
+                    -8.214261489336746,
+                    1.5934026938693424
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftShoulder": {
+                "position": [
+                    4.713548615420971,
+                    14.028309863912112,
+                    -1.680736689055093
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightArm": {
+                "position": [
+                    -11.879724091161865,
+                    -0.47887839471334825,
+                    -0.06651068725043487
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex4": {
+                "position": [
+                    0.20619279726685136,
+                    -3.0929255015800408,
+                    1.3571734918277338
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Hips": {
+                "position": [
+                    5.509842256924691e-11,
+                    101.9190311870334,
+                    1.0030518439188543
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightFoot": {
+                "position": [
+                    -2.6650646572205616,
+                    -44.09916680677496,
+                    -4.273669003480235
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb2": {
+                "position": [
+                    0.5930076602401044,
+                    -1.999084988372999,
+                    3.574503118072778
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky4": {
+                "position": [
+                    -0.20059976554282605,
+                    -2.5141678887984256,
+                    0.7539427389328807
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb1": {
+                "position": [
+                    -0.020598166116315045,
+                    -1.7168379446277133,
+                    3.838349435289247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky1": {
+                "position": [
+                    4.515940548197356,
+                    -8.710062043072522,
+                    -0.910508920288756
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb4": {
+                "position": [
+                    0.09595861413774996,
+                    -3.27362689667244,
+                    1.3131576747448028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky3": {
+                "position": [
+                    0.3146748555674251,
+                    -2.1821986678528877,
+                    0.3819139171359334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightUpLeg": {
+                "position": [
+                    -9.53438341332477,
+                    0.5297579760834595,
+                    -0.31270508449355705
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle2": {
+                "position": [
+                    -1.8954432808287223,
+                    -3.8467158471341634,
+                    1.5789588744705247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle3": {
+                "position": [
+                    -0.5671873896598426,
+                    -3.171291688978897,
+                    1.469026021650494
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing1": {
+                "position": [
+                    4.880082093038396,
+                    -8.214248036104038,
+                    1.593421596364253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle1": {
+                "position": [
+                    -4.94560155817026,
+                    -7.742627622596928,
+                    4.1177989074371215
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle4": {
+                "position": [
+                    0.786623439881339,
+                    -3.2255093541214146,
+                    0.9607209440336638
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing4": {
+                "position": [
+                    -0.1557931059154712,
+                    -2.8706680505367927,
+                    0.7893952559257684
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing3": {
+                "position": [
+                    0.09355301408445625,
+                    -3.4823525959664607,
+                    0.9705914313140768
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "HeadTop_End": {
+                "position": [
+                    0.0000022076600167923606,
+                    22.606937627877077,
+                    3.8956333846110267
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky2": {
+                "position": [
+                    0.9847890632550147,
+                    -2.6373552703622924,
+                    0.009820255828264292
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing2": {
+                "position": [
+                    1.6646723461102655,
+                    -3.752320063187469,
+                    0.839472709151721
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing3": {
+                "position": [
+                    -0.09361367894242535,
+                    -3.4823124679723354,
+                    0.9705655149043577
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Wolf3D_Outfit_Footwear": {
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToe_End": {
+                "position": [
+                    0.31188356997239824,
+                    -0.5787352519092512,
+                    9.885648808479276
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle3": {
+                "position": [
+                    0.5671602877558611,
+                    -3.1712623434447944,
+                    1.4690208830463352
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        "indices": {
+            "fileOffset": 0,
+            "generated": false,
+            "count": 5112,
+            "value_size": 1,
+            "size_uncompressed": 10224
+        }
+    },
+    "36": {
+        "offsets": [
+            {
+                "count": 9906,
+                "start": 0,
+                "materialIndex": 0,
+                "polygonSize": 3,
+                "index": 0
+            }
+        ],
+        "vertex_attributes": {
+            "skin_indices": {
+                "fileOffset": 111316,
+                "generated": false,
+                "count": 1898,
+                "value_size": 4,
+                "size_uncompressed": 30368
+            },
+            "tangents": {
+                "fileOffset": 141684,
+                "generated": true,
+                "count": 1898,
+                "value_size": 4,
+                "size_uncompressed": 30368
+            },
+            "skin_weights": {
+                "fileOffset": 172052,
+                "generated": false,
+                "count": 1898,
+                "value_size": 4,
+                "size_uncompressed": 30368
+            },
+            "positions": {
+                "fileOffset": 202420,
+                "generated": false,
+                "count": 1898,
+                "value_size": 3,
+                "size_uncompressed": 22776
+            },
+            "uvs1": {
+                "fileOffset": 225196,
+                "generated": false,
+                "count": 1898,
+                "value_size": 2,
+                "size_uncompressed": 15184
+            },
+            "normals": {
+                "fileOffset": 240380,
+                "generated": false,
+                "count": 1898,
+                "value_size": 3,
+                "size_uncompressed": 22776
+            }
+        },
+        "bones": [
+            "Hips",
+            "Spine",
+            "Spine1",
+            "Spine2",
+            "Neck",
+            "Head",
+            "HeadTop_End",
+            "LeftShoulder",
+            "LeftArm",
+            "LeftForeArm",
+            "LeftHand",
+            "LeftHandThumb1",
+            "LeftHandThumb2",
+            "LeftHandThumb3",
+            "LeftHandThumb4",
+            "LeftHandIndex1",
+            "LeftHandIndex2",
+            "LeftHandIndex3",
+            "LeftHandIndex4",
+            "LeftHandMiddle1",
+            "LeftHandMiddle2",
+            "LeftHandMiddle3",
+            "LeftHandMiddle4",
+            "LeftHandRing1",
+            "LeftHandRing2",
+            "LeftHandRing3",
+            "LeftHandRing4",
+            "LeftHandPinky1",
+            "LeftHandPinky2",
+            "LeftHandPinky3",
+            "LeftHandPinky4",
+            "RightShoulder",
+            "RightArm",
+            "RightForeArm",
+            "RightHand",
+            "RightHandThumb1",
+            "RightHandThumb2",
+            "RightHandThumb3",
+            "RightHandThumb4",
+            "RightHandIndex1",
+            "RightHandIndex2",
+            "RightHandIndex3",
+            "RightHandIndex4",
+            "RightHandMiddle1",
+            "RightHandMiddle2",
+            "RightHandMiddle3",
+            "RightHandMiddle4",
+            "RightHandRing1",
+            "RightHandRing2",
+            "RightHandRing3",
+            "RightHandRing4",
+            "RightHandPinky1",
+            "RightHandPinky2",
+            "RightHandPinky3",
+            "RightHandPinky4",
+            "LeftUpLeg",
+            "LeftLeg",
+            "LeftFoot",
+            "LeftToeBase",
+            "LeftToe_End",
+            "RightUpLeg",
+            "RightLeg",
+            "RightFoot",
+            "RightToeBase",
+            "RightToe_End"
+        ],
+        "bind_pose": {
+            "RightHandIndex1": {
+                "position": [
+                    -4.426090609340797,
+                    -6.764212404749273,
+                    6.527218988335111
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftArm": {
+                "position": [
+                    11.879689577590042,
+                    -0.47905766241171927,
+                    -0.06648887827101337
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle1": {
+                "position": [
+                    4.94550605524575,
+                    -7.742564099562813,
+                    4.117810415908209
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Wolf3D_Outfit_Top": {
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToeBase": {
+                "position": [
+                    0.2524154602782893,
+                    -8.438617523553079,
+                    12.258549016196497
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine1": {
+                "position": [
+                    -6.503797720691914e-7,
+                    12.97779779160875,
+                    -1.3681445277779423
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex4": {
+                "position": [
+                    -0.20628371401495116,
+                    -3.0929159675059172,
+                    1.357147157130088
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine2": {
+                "position": [
+                    -0.0000032160235082388522,
+                    12.00627708525816,
+                    -2.0534572279321472
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex2": {
+                "position": [
+                    1.3070891454510092,
+                    -3.8022535238496142,
+                    1.9483582072652863
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex3": {
+                "position": [
+                    0.2830564635594045,
+                    -2.5010986050717885,
+                    1.303448571908689
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToeBase": {
+                "position": [
+                    -0.2521905069211758,
+                    -8.438611173827471,
+                    12.258562847749998
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex1": {
+                "position": [
+                    4.425998781787406,
+                    -6.764182931976221,
+                    6.527236999474679
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHand": {
+                "position": [
+                    13.99355446008012,
+                    -18.88336720182671,
+                    9.082776102723676
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Neck": {
+                "position": [
+                    -0.0000076170483494185216,
+                    15.513799709683953,
+                    -1.1650191609950122
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb2": {
+                "position": [
+                    -0.5930467482744247,
+                    -1.9990987649200491,
+                    3.574510779755604
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Head": {
+                "position": [
+                    -0.00000866823265233562,
+                    11.585984412805518,
+                    4.0206784642023035
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHand": {
+                "position": [
+                    -13.99379427748255,
+                    -18.88315892025351,
+                    9.08272196740162
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex3": {
+                "position": [
+                    -0.2830758011144355,
+                    -2.5011117914698815,
+                    1.3034698686128898
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky4": {
+                "position": [
+                    0.20054659422564214,
+                    -2.51415526006258,
+                    0.7539494617103517
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky1": {
+                "position": [
+                    -4.516070323265645,
+                    -8.710053338502872,
+                    -0.9105260706299334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightLeg": {
+                "position": [
+                    -3.0152328197275877,
+                    -45.714069869411865,
+                    -0.5990969355213059
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky3": {
+                "position": [
+                    -0.314730916286436,
+                    -2.182177234806204,
+                    0.38191128879354175
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky2": {
+                "position": [
+                    -0.9847912609191384,
+                    -2.637336063950045,
+                    0.00982651106604937
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex2": {
+                "position": [
+                    -1.3071479923832714,
+                    -3.8022187151095745,
+                    1.948348564371431
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb3": {
+                "position": [
+                    -0.17508130439680517,
+                    -2.595001756848632,
+                    1.5905098002597224
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb1": {
+                "position": [
+                    0.020579412230262047,
+                    -1.7167483978922888,
+                    3.838357922416918
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToe_End": {
+                "position": [
+                    -0.31187101180385585,
+                    -0.5787343827510639,
+                    9.885672121391611
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftLeg": {
+                "position": [
+                    3.0151363097712367,
+                    -45.71406615971351,
+                    -0.5991057010263744
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftForeArm": {
+                "position": [
+                    14.370659699692293,
+                    -24.534339741923443,
+                    -2.1289230327188253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightForeArm": {
+                "position": [
+                    -14.371027514751097,
+                    -24.534091263830437,
+                    -2.128950884240856
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb4": {
+                "position": [
+                    -0.09601331841632542,
+                    -3.2736326189067033,
+                    1.3131550378199872
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky4": {
+                "position": [
+                    -0.20059976554282605,
+                    -2.5141678887984256,
+                    0.7539427389328807
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine": {
+                "position": [
+                    -5.602426606496505e-8,
+                    9.842117729037483,
+                    0.3196032483306082
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftUpLeg": {
+                "position": [
+                    9.534386723315672,
+                    0.5297222012384851,
+                    -0.3127019459199584
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftFoot": {
+                "position": [
+                    2.664914328123532,
+                    -44.09909065543218,
+                    -4.273668386751656
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle4": {
+                "position": [
+                    -0.7866446384159718,
+                    -3.2254776459936494,
+                    0.9607312218943028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing4": {
+                "position": [
+                    0.15574322880327435,
+                    -2.8706635373812333,
+                    0.7894000860806346
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle2": {
+                "position": [
+                    1.895369641780512,
+                    -3.846730461967525,
+                    1.5789422552899095
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle3": {
+                "position": [
+                    0.5671602877558611,
+                    -3.1712623434447944,
+                    1.4690208830463352
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing1": {
+                "position": [
+                    -4.8801913930519385,
+                    -8.214261489336746,
+                    1.5934026938693424
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftShoulder": {
+                "position": [
+                    4.713548615420971,
+                    14.028309863912112,
+                    -1.680736689055093
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky1": {
+                "position": [
+                    4.515940548197356,
+                    -8.710062043072522,
+                    -0.910508920288756
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex4": {
+                "position": [
+                    0.20619279726685136,
+                    -3.0929255015800408,
+                    1.3571734918277338
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Hips": {
+                "position": [
+                    5.509842256924691e-11,
+                    101.9190311870334,
+                    1.0030518439188543
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightFoot": {
+                "position": [
+                    -2.6650646572205616,
+                    -44.09916680677496,
+                    -4.273669003480235
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb2": {
+                "position": [
+                    0.5930076602401044,
+                    -1.999084988372999,
+                    3.574503118072778
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb3": {
+                "position": [
+                    0.1749957109853,
+                    -2.5949883713647353,
+                    1.5905027428847751
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb1": {
+                "position": [
+                    -0.020598166116315045,
+                    -1.7168379446277133,
+                    3.838349435289247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightArm": {
+                "position": [
+                    -11.879724091161865,
+                    -0.47887839471334825,
+                    -0.06651068725043487
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky3": {
+                "position": [
+                    0.3146748555674251,
+                    -2.1821986678528877,
+                    0.3819139171359334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb4": {
+                "position": [
+                    0.09595861413774996,
+                    -3.27362689667244,
+                    1.3131576747448028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightUpLeg": {
+                "position": [
+                    -9.53438341332477,
+                    0.5297579760834595,
+                    -0.31270508449355705
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle2": {
+                "position": [
+                    -1.8954432808287223,
+                    -3.8467158471341634,
+                    1.5789588744705247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle3": {
+                "position": [
+                    -0.5671873896598426,
+                    -3.171291688978897,
+                    1.469026021650494
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing1": {
+                "position": [
+                    4.880082093038396,
+                    -8.214248036104038,
+                    1.593421596364253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle1": {
+                "position": [
+                    -4.94560155817026,
+                    -7.742627622596928,
+                    4.1177989074371215
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle4": {
+                "position": [
+                    0.786623439881339,
+                    -3.2255093541214146,
+                    0.9607209440336638
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing4": {
+                "position": [
+                    -0.1557931059154712,
+                    -2.8706680505367927,
+                    0.7893952559257684
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing3": {
+                "position": [
+                    0.09355301408445625,
+                    -3.4823525959664607,
+                    0.9705914313140768
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "HeadTop_End": {
+                "position": [
+                    0.0000022076600167923606,
+                    22.606937627877077,
+                    3.8956333846110267
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky2": {
+                "position": [
+                    0.9847890632550147,
+                    -2.6373552703622924,
+                    0.009820255828264292
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing2": {
+                "position": [
+                    1.6646723461102655,
+                    -3.752320063187469,
+                    0.839472709151721
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing3": {
+                "position": [
+                    -0.09361367894242535,
+                    -3.4823124679723354,
+                    0.9705655149043577
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightShoulder": {
+                "position": [
+                    -4.713551804577378,
+                    14.028309437956919,
+                    -1.6807404216277657
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToe_End": {
+                "position": [
+                    0.31188356997239824,
+                    -0.5787352519092512,
+                    9.885648808479276
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing2": {
+                "position": [
+                    -1.6647811927307432,
+                    -3.7523581891495885,
+                    0.8394972850856622
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        "indices": {
+            "fileOffset": 91504,
+            "generated": false,
+            "count": 9906,
+            "value_size": 1,
+            "size_uncompressed": 19812
+        }
+    },
+    "39": {
+        "offsets": [
+            {
+                "count": 4890,
+                "start": 0,
+                "materialIndex": 0,
+                "polygonSize": 3,
+                "index": 0
+            }
+        ],
+        "vertex_attributes": {
+            "skin_indices": {
+                "fileOffset": 272936,
+                "generated": false,
+                "count": 1082,
+                "value_size": 4,
+                "size_uncompressed": 17312
+            },
+            "tangents": {
+                "fileOffset": 290248,
+                "generated": true,
+                "count": 1082,
+                "value_size": 4,
+                "size_uncompressed": 17312
+            },
+            "skin_weights": {
+                "fileOffset": 307560,
+                "generated": false,
+                "count": 1082,
+                "value_size": 4,
+                "size_uncompressed": 17312
+            },
+            "positions": {
+                "fileOffset": 324872,
+                "generated": false,
+                "count": 1082,
+                "value_size": 3,
+                "size_uncompressed": 12984
+            },
+            "uvs1": {
+                "fileOffset": 337856,
+                "generated": false,
+                "count": 1082,
+                "value_size": 2,
+                "size_uncompressed": 8656
+            },
+            "normals": {
+                "fileOffset": 346512,
+                "generated": false,
+                "count": 1082,
+                "value_size": 3,
+                "size_uncompressed": 12984
+            }
+        },
+        "bones": [
+            "Hips",
+            "Spine",
+            "Spine1",
+            "Spine2",
+            "Neck",
+            "Head",
+            "HeadTop_End",
+            "LeftShoulder",
+            "LeftArm",
+            "LeftForeArm",
+            "LeftHand",
+            "LeftHandThumb1",
+            "LeftHandThumb2",
+            "LeftHandThumb3",
+            "LeftHandThumb4",
+            "LeftHandIndex1",
+            "LeftHandIndex2",
+            "LeftHandIndex3",
+            "LeftHandIndex4",
+            "LeftHandMiddle1",
+            "LeftHandMiddle2",
+            "LeftHandMiddle3",
+            "LeftHandMiddle4",
+            "LeftHandRing1",
+            "LeftHandRing2",
+            "LeftHandRing3",
+            "LeftHandRing4",
+            "LeftHandPinky1",
+            "LeftHandPinky2",
+            "LeftHandPinky3",
+            "LeftHandPinky4",
+            "RightShoulder",
+            "RightArm",
+            "RightForeArm",
+            "RightHand",
+            "RightHandThumb1",
+            "RightHandThumb2",
+            "RightHandThumb3",
+            "RightHandThumb4",
+            "RightHandIndex1",
+            "RightHandIndex2",
+            "RightHandIndex3",
+            "RightHandIndex4",
+            "RightHandMiddle1",
+            "RightHandMiddle2",
+            "RightHandMiddle3",
+            "RightHandMiddle4",
+            "RightHandRing1",
+            "RightHandRing2",
+            "RightHandRing3",
+            "RightHandRing4",
+            "RightHandPinky1",
+            "RightHandPinky2",
+            "RightHandPinky3",
+            "RightHandPinky4",
+            "LeftUpLeg",
+            "LeftLeg",
+            "LeftFoot",
+            "LeftToeBase",
+            "LeftToe_End",
+            "RightUpLeg",
+            "RightLeg",
+            "RightFoot",
+            "RightToeBase",
+            "RightToe_End"
+        ],
+        "bind_pose": {
+            "RightHandPinky1": {
+                "position": [
+                    -4.516070323265645,
+                    -8.710053338502872,
+                    -0.9105260706299334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle1": {
+                "position": [
+                    4.94550605524575,
+                    -7.742564099562813,
+                    4.117810415908209
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToeBase": {
+                "position": [
+                    0.2524154602782893,
+                    -8.438617523553079,
+                    12.258549016196497
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine1": {
+                "position": [
+                    -6.503797720691914e-7,
+                    12.97779779160875,
+                    -1.3681445277779423
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex4": {
+                "position": [
+                    -0.20628371401495116,
+                    -3.0929159675059172,
+                    1.357147157130088
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine2": {
+                "position": [
+                    -0.0000032160235082388522,
+                    12.00627708525816,
+                    -2.0534572279321472
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex2": {
+                "position": [
+                    1.3070891454510092,
+                    -3.8022535238496142,
+                    1.9483582072652863
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex3": {
+                "position": [
+                    0.2830564635594045,
+                    -2.5010986050717885,
+                    1.303448571908689
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing2": {
+                "position": [
+                    -1.6647811927307432,
+                    -3.7523581891495885,
+                    0.8394972850856622
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex1": {
+                "position": [
+                    4.425998781787406,
+                    -6.764182931976221,
+                    6.527236999474679
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHand": {
+                "position": [
+                    13.99355446008012,
+                    -18.88336720182671,
+                    9.082776102723676
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Neck": {
+                "position": [
+                    -0.0000076170483494185216,
+                    15.513799709683953,
+                    -1.1650191609950122
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb2": {
+                "position": [
+                    -0.5930467482744247,
+                    -1.9990987649200491,
+                    3.574510779755604
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Head": {
+                "position": [
+                    -0.00000866823265233562,
+                    11.585984412805518,
+                    4.0206784642023035
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHand": {
+                "position": [
+                    -13.99379427748255,
+                    -18.88315892025351,
+                    9.08272196740162
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb3": {
+                "position": [
+                    -0.17508130439680517,
+                    -2.595001756848632,
+                    1.5905098002597224
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky4": {
+                "position": [
+                    0.20054659422564214,
+                    -2.51415526006258,
+                    0.7539494617103517
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftArm": {
+                "position": [
+                    11.879689577590042,
+                    -0.47905766241171927,
+                    -0.06648887827101337
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightLeg": {
+                "position": [
+                    -3.0152328197275877,
+                    -45.714069869411865,
+                    -0.5990969355213059
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky3": {
+                "position": [
+                    -0.314730916286436,
+                    -2.182177234806204,
+                    0.38191128879354175
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky2": {
+                "position": [
+                    -0.9847912609191384,
+                    -2.637336063950045,
+                    0.00982651106604937
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex2": {
+                "position": [
+                    -1.3071479923832714,
+                    -3.8022187151095745,
+                    1.948348564371431
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex3": {
+                "position": [
+                    -0.2830758011144355,
+                    -2.5011117914698815,
+                    1.3034698686128898
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex1": {
+                "position": [
+                    -4.426090609340797,
+                    -6.764212404749273,
+                    6.527218988335111
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToe_End": {
+                "position": [
+                    -0.31187101180385585,
+                    -0.5787343827510639,
+                    9.885672121391611
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb4": {
+                "position": [
+                    -0.09601331841632542,
+                    -3.2736326189067033,
+                    1.3131550378199872
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftForeArm": {
+                "position": [
+                    14.370659699692293,
+                    -24.534339741923443,
+                    -2.1289230327188253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightForeArm": {
+                "position": [
+                    -14.371027514751097,
+                    -24.534091263830437,
+                    -2.128950884240856
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftLeg": {
+                "position": [
+                    3.0151363097712367,
+                    -45.71406615971351,
+                    -0.5991057010263744
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb1": {
+                "position": [
+                    0.020579412230262047,
+                    -1.7167483978922888,
+                    3.838357922416918
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToeBase": {
+                "position": [
+                    -0.2521905069211758,
+                    -8.438611173827471,
+                    12.258562847749998
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky4": {
+                "position": [
+                    -0.20059976554282605,
+                    -2.5141678887984256,
+                    0.7539427389328807
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine": {
+                "position": [
+                    -5.602426606496505e-8,
+                    9.842117729037483,
+                    0.3196032483306082
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftUpLeg": {
+                "position": [
+                    9.534386723315672,
+                    0.5297222012384851,
+                    -0.3127019459199584
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftFoot": {
+                "position": [
+                    2.664914328123532,
+                    -44.09909065543218,
+                    -4.273668386751656
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle4": {
+                "position": [
+                    -0.7866446384159718,
+                    -3.2254776459936494,
+                    0.9607312218943028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing4": {
+                "position": [
+                    0.15574322880327435,
+                    -2.8706635373812333,
+                    0.7894000860806346
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle2": {
+                "position": [
+                    1.895369641780512,
+                    -3.846730461967525,
+                    1.5789422552899095
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle3": {
+                "position": [
+                    0.5671602877558611,
+                    -3.1712623434447944,
+                    1.4690208830463352
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing1": {
+                "position": [
+                    -4.8801913930519385,
+                    -8.214261489336746,
+                    1.5934026938693424
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftShoulder": {
+                "position": [
+                    4.713548615420971,
+                    14.028309863912112,
+                    -1.680736689055093
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky1": {
+                "position": [
+                    4.515940548197356,
+                    -8.710062043072522,
+                    -0.910508920288756
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex4": {
+                "position": [
+                    0.20619279726685136,
+                    -3.0929255015800408,
+                    1.3571734918277338
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Hips": {
+                "position": [
+                    5.509842256924691e-11,
+                    101.9190311870334,
+                    1.0030518439188543
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightFoot": {
+                "position": [
+                    -2.6650646572205616,
+                    -44.09916680677496,
+                    -4.273669003480235
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb2": {
+                "position": [
+                    0.5930076602401044,
+                    -1.999084988372999,
+                    3.574503118072778
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb3": {
+                "position": [
+                    0.1749957109853,
+                    -2.5949883713647353,
+                    1.5905027428847751
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb1": {
+                "position": [
+                    -0.020598166116315045,
+                    -1.7168379446277133,
+                    3.838349435289247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightArm": {
+                "position": [
+                    -11.879724091161865,
+                    -0.47887839471334825,
+                    -0.06651068725043487
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky3": {
+                "position": [
+                    0.3146748555674251,
+                    -2.1821986678528877,
+                    0.3819139171359334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb4": {
+                "position": [
+                    0.09595861413774996,
+                    -3.27362689667244,
+                    1.3131576747448028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightUpLeg": {
+                "position": [
+                    -9.53438341332477,
+                    0.5297579760834595,
+                    -0.31270508449355705
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle2": {
+                "position": [
+                    -1.8954432808287223,
+                    -3.8467158471341634,
+                    1.5789588744705247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing2": {
+                "position": [
+                    1.6646723461102655,
+                    -3.752320063187469,
+                    0.839472709151721
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing1": {
+                "position": [
+                    4.880082093038396,
+                    -8.214248036104038,
+                    1.593421596364253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle1": {
+                "position": [
+                    -4.94560155817026,
+                    -7.742627622596928,
+                    4.1177989074371215
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky2": {
+                "position": [
+                    0.9847890632550147,
+                    -2.6373552703622924,
+                    0.009820255828264292
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle4": {
+                "position": [
+                    0.786623439881339,
+                    -3.2255093541214146,
+                    0.9607209440336638
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing4": {
+                "position": [
+                    -0.1557931059154712,
+                    -2.8706680505367927,
+                    0.7893952559257684
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing3": {
+                "position": [
+                    0.09355301408445625,
+                    -3.4823525959664607,
+                    0.9705914313140768
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "HeadTop_End": {
+                "position": [
+                    0.0000022076600167923606,
+                    22.606937627877077,
+                    3.8956333846110267
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle3": {
+                "position": [
+                    -0.5671873896598426,
+                    -3.171291688978897,
+                    1.469026021650494
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Wolf3D_Body": {
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing3": {
+                "position": [
+                    -0.09361367894242535,
+                    -3.4823124679723354,
+                    0.9705655149043577
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToe_End": {
+                "position": [
+                    0.31188356997239824,
+                    -0.5787352519092512,
+                    9.885648808479276
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightShoulder": {
+                "position": [
+                    -4.713551804577378,
+                    14.028309437956919,
+                    -1.6807404216277657
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        "indices": {
+            "fileOffset": 263156,
+            "generated": false,
+            "count": 4890,
+            "value_size": 1,
+            "size_uncompressed": 9780
+        }
+    },
+    "42": {
+        "offsets": [
+            {
+                "count": 2496,
+                "start": 0,
+                "materialIndex": 0,
+                "polygonSize": 3,
+                "index": 0
+            }
+        ],
+        "vertex_attributes": {
+            "skin_indices": {
+                "fileOffset": 364488,
+                "generated": false,
+                "count": 476,
+                "value_size": 4,
+                "size_uncompressed": 7616
+            },
+            "tangents": {
+                "fileOffset": 372104,
+                "generated": true,
+                "count": 476,
+                "value_size": 4,
+                "size_uncompressed": 7616
+            },
+            "skin_weights": {
+                "fileOffset": 379720,
+                "generated": false,
+                "count": 476,
+                "value_size": 4,
+                "size_uncompressed": 7616
+            },
+            "positions": {
+                "fileOffset": 387336,
+                "generated": false,
+                "count": 476,
+                "value_size": 3,
+                "size_uncompressed": 5712
+            },
+            "uvs1": {
+                "fileOffset": 393048,
+                "generated": false,
+                "count": 476,
+                "value_size": 2,
+                "size_uncompressed": 3808
+            },
+            "normals": {
+                "fileOffset": 396856,
+                "generated": false,
+                "count": 476,
+                "value_size": 3,
+                "size_uncompressed": 5712
+            }
+        },
+        "bones": [
+            "Hips",
+            "Spine",
+            "Spine1",
+            "Spine2",
+            "Neck",
+            "Head",
+            "HeadTop_End",
+            "LeftShoulder",
+            "LeftArm",
+            "LeftForeArm",
+            "LeftHand",
+            "LeftHandThumb1",
+            "LeftHandThumb2",
+            "LeftHandThumb3",
+            "LeftHandThumb4",
+            "LeftHandIndex1",
+            "LeftHandIndex2",
+            "LeftHandIndex3",
+            "LeftHandIndex4",
+            "LeftHandMiddle1",
+            "LeftHandMiddle2",
+            "LeftHandMiddle3",
+            "LeftHandMiddle4",
+            "LeftHandRing1",
+            "LeftHandRing2",
+            "LeftHandRing3",
+            "LeftHandRing4",
+            "LeftHandPinky1",
+            "LeftHandPinky2",
+            "LeftHandPinky3",
+            "LeftHandPinky4",
+            "RightShoulder",
+            "RightArm",
+            "RightForeArm",
+            "RightHand",
+            "RightHandThumb1",
+            "RightHandThumb2",
+            "RightHandThumb3",
+            "RightHandThumb4",
+            "RightHandIndex1",
+            "RightHandIndex2",
+            "RightHandIndex3",
+            "RightHandIndex4",
+            "RightHandMiddle1",
+            "RightHandMiddle2",
+            "RightHandMiddle3",
+            "RightHandMiddle4",
+            "RightHandRing1",
+            "RightHandRing2",
+            "RightHandRing3",
+            "RightHandRing4",
+            "RightHandPinky1",
+            "RightHandPinky2",
+            "RightHandPinky3",
+            "RightHandPinky4",
+            "LeftUpLeg",
+            "LeftLeg",
+            "LeftFoot",
+            "LeftToeBase",
+            "LeftToe_End",
+            "RightUpLeg",
+            "RightLeg",
+            "RightFoot",
+            "RightToeBase",
+            "RightToe_End"
+        ],
+        "bind_pose": {
+            "LeftHandRing2": {
+                "position": [
+                    1.6646723461102655,
+                    -3.752320063187469,
+                    0.839472709151721
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky1": {
+                "position": [
+                    -4.516070323265645,
+                    -8.710053338502872,
+                    -0.9105260706299334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle1": {
+                "position": [
+                    4.94550605524575,
+                    -7.742564099562813,
+                    4.117810415908209
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToeBase": {
+                "position": [
+                    0.2524154602782893,
+                    -8.438617523553079,
+                    12.258549016196497
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine1": {
+                "position": [
+                    -6.503797720691914e-7,
+                    12.97779779160875,
+                    -1.3681445277779423
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex4": {
+                "position": [
+                    -0.20628371401495116,
+                    -3.0929159675059172,
+                    1.357147157130088
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine2": {
+                "position": [
+                    -0.0000032160235082388522,
+                    12.00627708525816,
+                    -2.0534572279321472
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex2": {
+                "position": [
+                    1.3070891454510092,
+                    -3.8022535238496142,
+                    1.9483582072652863
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex3": {
+                "position": [
+                    0.2830564635594045,
+                    -2.5010986050717885,
+                    1.303448571908689
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing2": {
+                "position": [
+                    -1.6647811927307432,
+                    -3.7523581891495885,
+                    0.8394972850856622
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandIndex1": {
+                "position": [
+                    4.425998781787406,
+                    -6.764182931976221,
+                    6.527236999474679
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHand": {
+                "position": [
+                    13.99355446008012,
+                    -18.88336720182671,
+                    9.082776102723676
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToeBase": {
+                "position": [
+                    -0.2521905069211758,
+                    -8.438611173827471,
+                    12.258562847749998
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Wolf3D_Outfit_Bottom": {
+                "position": [
+                    0,
+                    0,
+                    0
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Head": {
+                "position": [
+                    -0.00000866823265233562,
+                    11.585984412805518,
+                    4.0206784642023035
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHand": {
+                "position": [
+                    -13.99379427748255,
+                    -18.88315892025351,
+                    9.08272196740162
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex3": {
+                "position": [
+                    -0.2830758011144355,
+                    -2.5011117914698815,
+                    1.3034698686128898
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky4": {
+                "position": [
+                    0.20054659422564214,
+                    -2.51415526006258,
+                    0.7539494617103517
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftArm": {
+                "position": [
+                    11.879689577590042,
+                    -0.47905766241171927,
+                    -0.06648887827101337
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightLeg": {
+                "position": [
+                    -3.0152328197275877,
+                    -45.714069869411865,
+                    -0.5990969355213059
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky3": {
+                "position": [
+                    -0.314730916286436,
+                    -2.182177234806204,
+                    0.38191128879354175
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandPinky2": {
+                "position": [
+                    -0.9847912609191384,
+                    -2.637336063950045,
+                    0.00982651106604937
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex2": {
+                "position": [
+                    -1.3071479923832714,
+                    -3.8022187151095745,
+                    1.948348564371431
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb3": {
+                "position": [
+                    -0.17508130439680517,
+                    -2.595001756848632,
+                    1.5905098002597224
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex1": {
+                "position": [
+                    -4.426090609340797,
+                    -6.764212404749273,
+                    6.527218988335111
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightToe_End": {
+                "position": [
+                    -0.31187101180385585,
+                    -0.5787343827510639,
+                    9.885672121391611
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb4": {
+                "position": [
+                    -0.09601331841632542,
+                    -3.2736326189067033,
+                    1.3131550378199872
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftForeArm": {
+                "position": [
+                    14.370659699692293,
+                    -24.534339741923443,
+                    -2.1289230327188253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightForeArm": {
+                "position": [
+                    -14.371027514751097,
+                    -24.534091263830437,
+                    -2.128950884240856
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb1": {
+                "position": [
+                    0.020579412230262047,
+                    -1.7167483978922888,
+                    3.838357922416918
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftLeg": {
+                "position": [
+                    3.0151363097712367,
+                    -45.71406615971351,
+                    -0.5991057010263744
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb3": {
+                "position": [
+                    0.1749957109853,
+                    -2.5949883713647353,
+                    1.5905027428847751
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Spine": {
+                "position": [
+                    -5.602426606496505e-8,
+                    9.842117729037483,
+                    0.3196032483306082
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftUpLeg": {
+                "position": [
+                    9.534386723315672,
+                    0.5297222012384851,
+                    -0.3127019459199584
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftFoot": {
+                "position": [
+                    2.664914328123532,
+                    -44.09909065543218,
+                    -4.273668386751656
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle4": {
+                "position": [
+                    -0.7866446384159718,
+                    -3.2254776459936494,
+                    0.9607312218943028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing4": {
+                "position": [
+                    0.15574322880327435,
+                    -2.8706635373812333,
+                    0.7894000860806346
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle2": {
+                "position": [
+                    1.895369641780512,
+                    -3.846730461967525,
+                    1.5789422552899095
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandMiddle3": {
+                "position": [
+                    0.5671602877558611,
+                    -3.1712623434447944,
+                    1.4690208830463352
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing1": {
+                "position": [
+                    -4.8801913930519385,
+                    -8.214261489336746,
+                    1.5934026938693424
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftShoulder": {
+                "position": [
+                    4.713548615420971,
+                    14.028309863912112,
+                    -1.680736689055093
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightArm": {
+                "position": [
+                    -11.879724091161865,
+                    -0.47887839471334825,
+                    -0.06651068725043487
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandIndex4": {
+                "position": [
+                    0.20619279726685136,
+                    -3.0929255015800408,
+                    1.3571734918277338
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Hips": {
+                "position": [
+                    5.509842256924691e-11,
+                    101.9190311870334,
+                    1.0030518439188543
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightFoot": {
+                "position": [
+                    -2.6650646572205616,
+                    -44.09916680677496,
+                    -4.273669003480235
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb2": {
+                "position": [
+                    0.5930076602401044,
+                    -1.999084988372999,
+                    3.574503118072778
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky4": {
+                "position": [
+                    -0.20059976554282605,
+                    -2.5141678887984256,
+                    0.7539427389328807
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb1": {
+                "position": [
+                    -0.020598166116315045,
+                    -1.7168379446277133,
+                    3.838349435289247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky1": {
+                "position": [
+                    4.515940548197356,
+                    -8.710062043072522,
+                    -0.910508920288756
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandThumb4": {
+                "position": [
+                    0.09595861413774996,
+                    -3.27362689667244,
+                    1.3131576747448028
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky3": {
+                "position": [
+                    0.3146748555674251,
+                    -2.1821986678528877,
+                    0.3819139171359334
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandThumb2": {
+                "position": [
+                    -0.5930467482744247,
+                    -1.9990987649200491,
+                    3.574510779755604
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing3": {
+                "position": [
+                    0.09355301408445625,
+                    -3.4823525959664607,
+                    0.9705914313140768
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle3": {
+                "position": [
+                    -0.5671873896598426,
+                    -3.171291688978897,
+                    1.469026021650494
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing1": {
+                "position": [
+                    4.880082093038396,
+                    -8.214248036104038,
+                    1.593421596364253
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle1": {
+                "position": [
+                    -4.94560155817026,
+                    -7.742627622596928,
+                    4.1177989074371215
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle4": {
+                "position": [
+                    0.786623439881339,
+                    -3.2255093541214146,
+                    0.9607209440336638
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandRing4": {
+                "position": [
+                    -0.1557931059154712,
+                    -2.8706680505367927,
+                    0.7893952559257684
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandMiddle2": {
+                "position": [
+                    -1.8954432808287223,
+                    -3.8467158471341634,
+                    1.5789588744705247
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "HeadTop_End": {
+                "position": [
+                    0.0000022076600167923606,
+                    22.606937627877077,
+                    3.8956333846110267
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftHandPinky2": {
+                "position": [
+                    0.9847890632550147,
+                    -2.6373552703622924,
+                    0.009820255828264292
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "Neck": {
+                "position": [
+                    -0.0000076170483494185216,
+                    15.513799709683953,
+                    -1.1650191609950122
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightUpLeg": {
+                "position": [
+                    -9.53438341332477,
+                    0.5297579760834595,
+                    -0.31270508449355705
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightHandRing3": {
+                "position": [
+                    -0.09361367894242535,
+                    -3.4823124679723354,
+                    0.9705655149043577
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "LeftToe_End": {
+                "position": [
+                    0.31188356997239824,
+                    -0.5787352519092512,
+                    9.885648808479276
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "RightShoulder": {
+                "position": [
+                    -4.713551804577378,
+                    14.028309437956919,
+                    -1.6807404216277657
+                ],
+                "quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        "indices": {
+            "fileOffset": 359496,
+            "generated": false,
+            "count": 2496,
+            "value_size": 1,
+            "size_uncompressed": 4992
+        }
+    },
+    "bufferPath": "8a49fd74-5d54-40af-90ce-1adaf82fff02-geo.bin"
+}
