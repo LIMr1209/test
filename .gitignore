@@ -7,4 +7,5 @@ jupyter/.ipynb_checkpoints
 *.glb
 env/
 log/
+facemodel/ani
 
