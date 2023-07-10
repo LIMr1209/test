@@ -30,7 +30,6 @@ for j, i in enumerate(data1):
     test = np.logical_and.reduce(equal, axis=1)
     indices = np.where(test)
     t = np.ravel(indices).tolist()
-    print(t)
     if t:
         uv_data[j] = t
 

@@ -10,37 +10,39 @@ proxies = {
 }
 
 cookies = {
-    'OptanonAlertBoxClosed': '2023-06-20T01:58:39.359Z',
+    'OptanonAlertBoxClosed': '2023-06-20T02:30:24.824Z',
     'OptanonConsent': 'groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1',
-    'AMCVS_9E1005A551ED61CA0A490D45%40AdobeOrg': '1',
-    'AMCV_9E1005A551ED61CA0A490D45%40AdobeOrg': '1099438348%7CMCMID%7C17966873185549161637477475827909361091%7CMCAID%7CNONE%7CMCOPTOUT-1687233520s%7CNONE%7CvVersion%7C2.1.0',
-    's_lv_s': 'Less%20than%201%20day',
-    's_nr': '1687854909515-Repeat',
-    's_lv': '1687854909515',
+    'AMCV_9E1005A551ED61CA0A490D45%40AdobeOrg': '1099438348%7CMCMID%7C91307366737064012929105513548722826897%7CMCAID%7CNONE%7CMCOPTOUT-1687235425s%7CNONE%7CvVersion%7C2.1.0',
+    's_lv_s': 'More%20than%207%20days',
+    's_nr': '1688969726530-Repeat',
+    's_lv': '1688969726531',
 }
 
 headers = {
-    'Accept': 'application/json, text/javascript, */*; q=0.01',
-    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-    'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2ODc4NTQ1MzI0MzlfMTg2NGQyOWEtMTc4MS00OGE4LTllMzQtZTlkNTQzOWQwNzQzX3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJtaXhhbW8xIiwidXNlcl9pZCI6IkYzODYyOTA2NjQxQkRFOUUwQTQ5NUM0QUBBZG9iZUlEIiwic3RhdGUiOiIiLCJhcyI6Imltcy1uYTEiLCJhYV9pZCI6IkYzODYyOTA2NjQxQkRFOUUwQTQ5NUM0QUBBZG9iZUlEIiwiY3RwIjowLCJmZyI6IlhSNlRaV0dCVlBQNU1QTUtVTVFWNUhBQUhFPT09PT09Iiwic2lkIjoiMTY4NzY3MjY5MjQwMV82ZmZiODBlZi05ZDg0LTQ5NTAtYjM2MS0zYjAwNWQ4NTAxMzZfdWUxIiwicnRpZCI6IjE2ODc4NTQ1MzI0MzlfN2FiMmQxNGQtZjJmZi00YzI0LTkwNWUtODc1MjU0YjFkZWNmX3V3MiIsIm1vaSI6IjY4YjA5ZDhlIiwicGJhIjoiTWVkU2VjTm9FVixMb3dTZWMiLCJydGVhIjoiMTY4OTA2NDEzMjQzOSIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsImNyZWF0ZWRfYXQiOiIxNjg3ODU0NTMyNDM5Iiwic2NvcGUiOiJvcGVuaWQsQWRvYmVJRCJ9.Q2a8ROZiPJac8hubq8bfLj4NYfAc0I__EJPxxi9YNx09SBfcEenXp1xbu7PDe6apXxPpMftqg8qA9RKQqoNXpgqodsDEIIicrjJT0BCeGCE74QWIV2E5jXaGxEsc_bsTPvHAROxcg1dGgXfDDV_NAyIOGc5rfiSIL1kqKK20BRKUfB4QrLzK-MjZ1KhU0IU7fFF-YbOU_AIP-94N-kZwVRA8fGGmX8F9ECChKkeaSmlw3QRfE7MakAL6kYTMfL25O2qC-_BrZoSISXsfBbuUgM_lyxe2VLQYqsI9vxGt0Nh4oHmcQk2eiyb-fSa9-MaPsBS4d5HOXEenm_rSTAgtVw',
+    'Accept': '*/*',
+    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2ODg5Njk2Njg5MTNfZmYzMTI5ZTAtMjU4Zi00MmM3LWJjYTUtNmEwMWY1YjBmOTM4X3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJtaXhhbW8xIiwidXNlcl9pZCI6IkZCMTIyQ0Y4NjIxNDgwNkUwQTQ5NUM2RkBBZG9iZUlEIiwic3RhdGUiOiIiLCJhcyI6Imltcy1uYTEiLCJhYV9pZCI6IkZCMTIyQ0Y4NjIxNDgwNkUwQTQ5NUM2RkBBZG9iZUlEIiwiY3RwIjowLCJmZyI6IlhUQzVNSzZDVlBQNTRQTUtXTVFWNUhBQVNNPT09PT09Iiwic2lkIjoiMTY4ODk2OTY2NDA2MV9hMGM0NWRkNS1mM2RlLTRhOGUtODVkNC1jNmQwY2JkMzRhY2RfdWUxIiwicnRpZCI6IjE2ODg5Njk2Njg5MTRfOTBkNmJmYWItM2E1MC00Yzg5LThlNTUtNzZjYjZmZTE2NzI0X3V3MiIsIm1vaSI6IjNlYTRmMTE0IiwicGJhIjoiTWVkU2VjTm9FVixMb3dTZWMiLCJydGVhIjoiMTY5MDE3OTI2ODkxNCIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoib3BlbmlkLEFkb2JlSUQiLCJjcmVhdGVkX2F0IjoiMTY4ODk2OTY2ODkxMyJ9.fHQZn_JPT6-Nn9KWIshUzaO5rtmPFTfb886_JmhkO-4Ht__-7TmjuskEO3V2dctU7xCLlqaY7yBNgqwbEM12x-Z_Uc1_NZLWDZGrvJIo7F_xv2vTen-bprwZ2A7UXIYsHo_Om-zTuPI1ZTfpHE2T_ehVt_b3FRSviNWPXyk1PDfGZIwLjmY__PsRGoaImES3WX4P5rcKIU2zqeNF6CqFb0pUXRxzhTO1NW_aXuK4QunxhnSmu-e80aakHSTi0CIc5PU_tw5M0emtVaTRKfOE1-gUAuCHAtvt-QRCTiuJYsSYGmA8F8l4D2Ey_xGHmpt4PpGDtqzvcthiEaY0iOjuLQ',
     'Connection': 'keep-alive',
-    # 'Cookie': 'OptanonAlertBoxClosed=2023-06-20T01:58:39.359Z; OptanonConsent=groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1; AMCVS_9E1005A551ED61CA0A490D45%40AdobeOrg=1; AMCV_9E1005A551ED61CA0A490D45%40AdobeOrg=1099438348%7CMCMID%7C17966873185549161637477475827909361091%7CMCAID%7CNONE%7CMCOPTOUT-1687233520s%7CNONE%7CvVersion%7C2.1.0; s_lv_s=Less%20than%201%20day; s_nr=1687854909515-Repeat; s_lv=1687854909515',
+    'Content-type': 'application/json',
+    # 'Cookie': 'OptanonAlertBoxClosed=2023-06-20T02:30:24.824Z; OptanonConsent=groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1; AMCV_9E1005A551ED61CA0A490D45%40AdobeOrg=1099438348%7CMCMID%7C91307366737064012929105513548722826897%7CMCAID%7CNONE%7CMCOPTOUT-1687235425s%7CNONE%7CvVersion%7C2.1.0; s_lv_s=More%20than%207%20days; s_nr=1688969726530-Repeat; s_lv=1688969726531',
+    'Origin': 'https://www.mixamo.com',
     'Referer': 'https://www.mixamo.com/',
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
     'X-Api-Key': 'mixamo2',
-    'X-Requested-With': 'XMLHttpRequest',
-    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjI0Nzc5ODkiLCJhcCI6IjE4MzQ3OTQ5NzUiLCJpZCI6ImM5ZDFlZjhiNTFlMmZmZmYiLCJ0ciI6Ijg1M2Y5MGRlMzdlYTk4ZjQwODhiOTViYjM4ODA4N2QwIiwidGkiOjE2ODc4NTQ5MjgwOTksInRrIjoiMTMyMjg0MCJ9fQ==',
+    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjI0Nzc5ODkiLCJhcCI6IjE4MzQ3OTQ5NzUiLCJpZCI6IjlhMjUyMDZiZTAwYTY4ZGEiLCJ0ciI6Ijk4ZDZhNmEyYmQyNDkzZjIyYTA4YWIzNDA1OTUyOTYwIiwidGkiOjE2ODg5Njk3Mjk1ODAsInRrIjoiMTMyMjg0MCJ9fQ==',
     'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Linux"',
-    'traceparent': '00-853f90de37ea98f4088b95bb388087d0-c9d1ef8b51e2ffff-01',
-    'tracestate': '1322840@nr=0-1-2477989-1834794975-c9d1ef8b51e2ffff----1687854928099',
+    'traceparent': '00-98d6a6a2bd2493f22a08ab3405952960-9a25206be00a68da-01',
+    'tracestate': '1322840@nr=0-1-2477989-1834794975-9a25206be00a68da----1688969729580',
 }
 
-page = 17
+
+character_id = "c78dded4-b5f3-44bb-9e9f-d0adda949ea0"
+page = 1
 
 params = {
     'page': '1',
@@ -68,7 +70,7 @@ while True:
         for i in page_res["results"]:
             params = {
                 'similar': '0',
-                'character_id': 'afb26de1-7840-4da5-848b-07c3c7179ac8',
+                'character_id': character_id
             }
             motion_id = i["motion_id"]
             try:
@@ -103,7 +105,7 @@ while True:
                 temp["params"] = ",".join(data)
                 json_data = {
                     'gms_hash': [temp],
-                    'character_id': 'afb26de1-7840-4da5-848b-07c3c7179ac8',
+                    'character_id': character_id,
                     'retargeting_payload': '',
                     'target_type': 'skin',
                 }
