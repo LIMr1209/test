@@ -1,4 +1,5 @@
 import json
+import os.path
 import time
 import traceback
 
@@ -40,6 +41,12 @@ headers = {
     'tracestate': '1322840@nr=0-1-2477989-1834794975-9a25206be00a68da----1688969729580',
 }
 
+keyword = ""
+base_dir = "ani"
+if keyword:
+    base_dir = keyword
+
+
 
 character_id = "c78dded4-b5f3-44bb-9e9f-d0adda949ea0"
 page = 1
@@ -49,7 +56,7 @@ params = {
     'limit': '48',
     'order': '',
     'type': 'Motion,MotionPack',
-    'query': '',
+    'query': keyword,
 }
 
 while True:
@@ -68,11 +75,33 @@ while True:
         page_res = json.loads(page_response.content.decode("utf-8"))
 
         for i in page_res["results"]:
+            if keyword:
+                if i["name"] != keyword:
+                    continue
             params = {
                 'similar': '0',
                 'character_id': character_id
             }
+            dir_s = f"{base_dir}/"+i["motion_id"]
+            if not os.path.exists(dir_s):
+                os.makedirs(dir_s)
             motion_id = i["motion_id"]
+
+            print("获取封面图")
+            try:
+                response = requests.get(i['thumbnail'], cookies=cookies, headers=headers, proxies=proxies)
+            except:
+                time.sleep(3)
+                response = requests.get(i['thumbnail'], cookies=cookies, headers=headers, proxies=proxies)
+            with open(f"{dir_s}/static.png", "wb") as f:
+                f.write(response.content)
+            try:
+                response = requests.get(i['thumbnail_animated'], cookies=cookies, headers=headers, proxies=proxies)
+            except:
+                time.sleep(3)
+                response = requests.get(i['thumbnail_animated'], cookies=cookies, headers=headers, proxies=proxies)
+            with open(f"{dir_s}/animated.gif", "wb") as f:
+                f.write(response.content)
             try:
                 adjust_response = requests.get(
                     'https://www.mixamo.com/api/v1/products/' + motion_id,
@@ -91,7 +120,6 @@ while True:
                     proxies=proxies
                 )
 
-
             print(f"获取动画详情数据{motion_id}")
             adjust_res = json.loads(adjust_response.content.decode("utf-8"))
 
@@ -109,7 +137,7 @@ while True:
                     'retargeting_payload': '',
                     'target_type': 'skin',
                 }
-                name = rf'{motion_id}+$+{i["name"]}.txt'.replace("/","\\")
+                name = rf'{i["name"]}.txt'.replace("/","\\")
 
                 print("结合模型和动画获取结果")
                 try:
@@ -125,7 +153,7 @@ while True:
                     raise Exception("500")
                 # if os.path.exists(f"ani/{name}"):
                 #     raise Exception("已经存在该文件")
-                with open(f"ani/{name}", "w") as f:
+                with open(f"{dir_s}/{name}", "w") as f:
                     f.write(response.content.decode("utf-8"))
                 print(f"结果保存{name}")
                 print("*" * 10)
@@ -138,11 +166,11 @@ while True:
                     temp["params"] = ",".join(data)
                     json_data = {
                         'gms_hash': [temp],
-                        'character_id': 'afb26de1-7840-4da5-848b-07c3c7179ac8',
+                        'character_id': character_id,
                         'retargeting_payload': '',
                         'target_type': 'skin',
                     }
-                    name = f'{motion_id}+$+{i["name"]}+index+{num}.txt'.replace("/","\\")
+                    name = f'{i["name"]}+index+{num}.txt'.replace("/","\\")
 
                     print("结合模型和动画获取结果")
                     response = requests.post('https://www.mixamo.com/api/v1/animations/stream', cookies=cookies,
@@ -152,7 +180,7 @@ while True:
                         raise Exception("500")
                     # if os.path.exists(f"ani/{name}"):
                     #     raise Exception("已经存在该文件")
-                    with open(f"ani/{name}", "w") as f:
+                    with open(f"{dir_s}/{name}", "w") as f:
                         f.write(response.content.decode("utf-8"))
                     print(f"结果保存{name}")
                     print("*" * 10)
@@ -163,6 +191,8 @@ while True:
         if page < page_res["pagination"]["num_pages"]:
             page += 1
         else:
+            break
+        if keyword:
             break
     except Exception as e:
         traceback.print_exc()
