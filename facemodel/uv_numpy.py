@@ -13,28 +13,28 @@ import time
 #         new_arr[:data2.shape[0], :] = data2
 #         data2 = new_arr
 
-
+#
 start = time.time()
-data2 = np.loadtxt("vertex_uv_coord_np.txt")
-
-with open("10.json", "r") as f:
-    temp = json.load(f)
-
-data1 = np.array([[item['x'], item['y']] for item in temp])
-
-uv_data = {}
-
-for j, i in enumerate(data1):
-    array = np.tile(i, (data1.shape[0],1))
-    equal = array == data2
-    test = np.logical_and.reduce(equal, axis=1)
-    indices = np.where(test)
-    t = np.ravel(indices).tolist()
-    if t:
-        uv_data[j] = t
-
-with open("result.json", "w") as f:
-    json.dump(uv_data, f)
+# data2 = np.loadtxt("vertex_uv_coord_np.txt")
+#
+# with open("10.json", "r") as f:
+#     temp = json.load(f)
+#
+# data1 = np.array([[item['x'], item['y']] for item in temp])
+#
+# uv_data = {}
+#
+# for j, i in enumerate(data1):
+#     array = np.tile(i, (data1.shape[0],1))
+#     equal = array == data2
+#     test = np.logical_and.reduce(equal, axis=1)
+#     indices = np.where(test)
+#     t = np.ravel(indices).tolist()
+#     if t:
+#         uv_data[j] = t
+#
+# with open("result.json", "w") as f:
+#     json.dump(uv_data, f)
 
 
 
@@ -84,31 +84,34 @@ with open("result.json", "w") as f:
 # indices = np.where(test)
 # print(np.ravel(indices).tolist())
 #
-# with open("10.json", "r") as f:
-#     data1 = json.load(f)
+with open("10.json", "r") as f:
+    data1 = json.load(f)
+
+data2 = []
+with open("vertex_uv_coord_np.txt", "r") as f:
+    for i in f:
+        xy = i.split()
+        data2.append({"x": float(xy[0]), "y": float(xy[1])})
+uv_data = {}
 #
-# data2 = []
-# with open("vertex_uv_coord_np(1).txt", "r") as f:
-#     for i in f:
-#         xy = i.split()
-#         data2.append({"x": float(xy[0]), "y": float(xy[1])})
-# uv_data = {}
-# #
-# for index1, i in enumerate(data1):
-#     # delete_data2_index = []
-#     for index2, j in enumerate(data2):
-#         if i == j:
-#             if index1 in uv_data:
-#                 uv_data[index1].append(index2)
-#             else:
-#                 uv_data[index1] = [index2]
-#
-#             # delete_data2_index.append(index2)
-#     # for index2 in delete_data2_index:
-#     #     data2.pop(index2)
-#
+v = 0
+for index1, i in enumerate(data1):
+    # delete_data2_index = []
+    for index2, j in enumerate(data2):
+        if i == j:
+            v += 1
+            # if index1 in uv_data:
+            #     uv_data[index1].append(index2)
+            # else:
+            #     uv_data[index1] = [index2]
+
+            # delete_data2_index.append(index2)
+    # for index2 in delete_data2_index:
+    #     data2.pop(index2)
+
 # print(json.dumps(uv_data))
 # print(len(uv_data))
+# print(v)
 #
 #
 
