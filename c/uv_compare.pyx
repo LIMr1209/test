@@ -29,20 +29,6 @@ cdef point* create_point():
     cdef point * ex = <point *> malloc(20792 * sizeof(point))
     return ex
 
-cdef bint point_compare(dict[str, float] i, dict[str, float] j):
-    cdef point* ex1 = create_point();
-    ex1.x = i["x"]
-    ex1.y = i["y"]
-    cdef point * ex2 = create_point()
-    ex2.x = j["x"]
-    ex2.y = j["y"]
-    if memcmp(ex1, ex2, sizeof(point)) == 0:
-        return True
-    else:
-        return False
-
-
-
 
 # 4秒
 # 两个修饰符用来关闭 Cython 的边界检查
@@ -69,18 +55,6 @@ cdef dict[str, int] _uv_compare(List[Dict[str, float]] data1, List[Dict[str, flo
                 else:
                     uv_data[str(index1)] = [index2]
 
-
-    # cdef Dict[str, int] uv_data = {}
-    # cdef int count = 0
-    # for index1, i in enumerate(data1):
-    #     for index2, j in enumerate(data2):
-    #         # if point_compare(i, j):
-    #         if i == j:
-    #         # if i["x"] == j["x"] and i["y"] == j["y"]:
-    #             if index1 in uv_data:
-    #                 uv_data[str(index1)].append(index2)
-    #             else:
-    #                 uv_data[str(index1)] = [index2]
     return uv_data
 
 # 在 Python 程序中，是看不到 cdef 的函数的，所以我们这里 def uv_compare(a, b) 来调用 cdef 过的 _uv_compare 函数。

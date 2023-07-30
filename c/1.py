@@ -76,7 +76,7 @@ def uv_compare(data1, data2):
 # print(json.dumps(uv_data))
 
 
-### 使用cython
+### 使用cython 0.23秒
 import uv_compare
 #
 result = uv_compare.uv_compare(data1, data2)
