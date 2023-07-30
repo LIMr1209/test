@@ -1363,7 +1363,7 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_t_10uv_compare_point;
 
-/* "uv_compare.pyx":22
+/* "uv_compare.pyx":24
  * 
  * 
  * cdef struct point:             # <<<<<<<<<<<<<<
@@ -1531,9 +1531,6 @@ static PyObject *__Pyx_PyDict_GetItem(PyObject *d, PyObject* key);
 #define __Pyx_PyObject_Dict_GetItem(obj, name)  PyObject_GetItem(obj, name)
 #endif
 
-/* RaiseUnexpectedTypeError.proto */
-static int __Pyx_RaiseUnexpectedTypeError(const char *expected, PyObject *obj);
-
 /* PyDictContains.proto */
 static CYTHON_INLINE int __Pyx_PyDict_ContainsTF(PyObject* item, PyObject* dict, int eq) {
     int result = PyDict_Contains(dict, item);
@@ -1681,6 +1678,15 @@ static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject *const *kwvalues
     PyObject **argnames[],
     PyObject *kwds2, PyObject *values[], Py_ssize_t num_pos_args,
     const char* function_name);
+
+/* RaiseUnexpectedTypeError.proto */
+static int __Pyx_RaiseUnexpectedTypeError(const char *expected, PyObject *obj);
+
+/* Import.proto */
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
+
+/* ImportFrom.proto */
+static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
 
 /* IncludeStructmemberH.proto */
 #include <structmember.h>
@@ -1862,6 +1868,17 @@ static void __pyx_insert_code_object(int code_line, PyCodeObject* code_object);
 static void __Pyx_AddTraceback(const char *funcname, int c_line,
                                int py_line, const char *filename);
 
+/* GCCDiagnostics.proto */
+#if !defined(__INTEL_COMPILER) && defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 6))
+#define __Pyx_HAS_GCC_DIAGNOSTIC
+#endif
+
+/* CIntFromPy.proto */
+static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
+
+/* CIntToPy.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
+
 /* FormatTypeName.proto */
 #if CYTHON_COMPILING_IN_LIMITED_API
 typedef PyObject *__Pyx_TypeName;
@@ -1874,17 +1891,6 @@ typedef const char *__Pyx_TypeName;
 #define __Pyx_PyType_GetName(tp) ((tp)->tp_name)
 #define __Pyx_DECREF_TypeName(obj)
 #endif
-
-/* GCCDiagnostics.proto */
-#if !defined(__INTEL_COMPILER) && defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 6))
-#define __Pyx_HAS_GCC_DIAGNOSTIC
-#endif
-
-/* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
-
-/* CIntFromPy.proto */
-static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
@@ -1922,7 +1928,6 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from "uv_compare" */
 static struct __pyx_t_10uv_compare_point *__pyx_f_10uv_compare_create_point(void); /*proto*/
-static int __pyx_f_10uv_compare_point_compare(PyObject *, PyObject *); /*proto*/
 static PyObject *__pyx_f_10uv_compare__uv_compare(PyObject *, PyObject *); /*proto*/
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
@@ -1933,16 +1938,23 @@ int __pyx_module_is_main_uv_compare = 0;
 /* Implementation of "uv_compare" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_enumerate;
+static PyObject *__pyx_builtin_range;
 /* #### Code section: string_decls ### */
+static const char __pyx_k_[] = ".";
 static const char __pyx_k_a[] = "a";
 static const char __pyx_k_b[] = "b";
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k_y[] = "y";
-static const char __pyx_k__3[] = "?";
+static const char __pyx_k__4[] = "?";
+static const char __pyx_k_Dict[] = "Dict";
+static const char __pyx_k_List[] = "List";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_range[] = "range";
 static const char __pyx_k_append[] = "append";
+static const char __pyx_k_import[] = "__import__";
+static const char __pyx_k_typing[] = "typing";
 static const char __pyx_k_enumerate[] = "enumerate";
 static const char __pyx_k_uv_compare[] = "uv_compare";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
@@ -1986,23 +1998,29 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
-  PyObject *__pyx_n_s__3;
+  PyObject *__pyx_kp_u_;
+  PyObject *__pyx_n_s_Dict;
+  PyObject *__pyx_n_s_List;
+  PyObject *__pyx_n_s__4;
   PyObject *__pyx_n_s_a;
   PyObject *__pyx_n_s_append;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_b;
   PyObject *__pyx_n_s_cline_in_traceback;
   PyObject *__pyx_n_s_enumerate;
+  PyObject *__pyx_n_s_import;
   PyObject *__pyx_n_s_is_coroutine;
   PyObject *__pyx_n_s_main;
   PyObject *__pyx_n_s_name;
+  PyObject *__pyx_n_s_range;
   PyObject *__pyx_n_s_test;
+  PyObject *__pyx_n_s_typing;
   PyObject *__pyx_n_s_uv_compare;
   PyObject *__pyx_kp_s_uv_compare_pyx;
   PyObject *__pyx_n_u_x;
   PyObject *__pyx_n_u_y;
-  PyObject *__pyx_tuple_;
-  PyObject *__pyx_codeobj__2;
+  PyObject *__pyx_tuple__2;
+  PyObject *__pyx_codeobj__3;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2045,23 +2063,29 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_CLEAR(clear_module_state->__pyx_n_s__3);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Dict);
+  Py_CLEAR(clear_module_state->__pyx_n_s_List);
+  Py_CLEAR(clear_module_state->__pyx_n_s__4);
   Py_CLEAR(clear_module_state->__pyx_n_s_a);
   Py_CLEAR(clear_module_state->__pyx_n_s_append);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_b);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
   Py_CLEAR(clear_module_state->__pyx_n_s_enumerate);
+  Py_CLEAR(clear_module_state->__pyx_n_s_import);
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
+  Py_CLEAR(clear_module_state->__pyx_n_s_range);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
+  Py_CLEAR(clear_module_state->__pyx_n_s_typing);
   Py_CLEAR(clear_module_state->__pyx_n_s_uv_compare);
   Py_CLEAR(clear_module_state->__pyx_kp_s_uv_compare_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_u_x);
   Py_CLEAR(clear_module_state->__pyx_n_u_y);
-  Py_CLEAR(clear_module_state->__pyx_tuple_);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__2);
+  Py_CLEAR(clear_module_state->__pyx_tuple__2);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__3);
   return 0;
 }
 #endif
@@ -2082,23 +2106,29 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_VISIT(traverse_module_state->__pyx_n_s__3);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Dict);
+  Py_VISIT(traverse_module_state->__pyx_n_s_List);
+  Py_VISIT(traverse_module_state->__pyx_n_s__4);
   Py_VISIT(traverse_module_state->__pyx_n_s_a);
   Py_VISIT(traverse_module_state->__pyx_n_s_append);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_b);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
   Py_VISIT(traverse_module_state->__pyx_n_s_enumerate);
+  Py_VISIT(traverse_module_state->__pyx_n_s_import);
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
+  Py_VISIT(traverse_module_state->__pyx_n_s_range);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
+  Py_VISIT(traverse_module_state->__pyx_n_s_typing);
   Py_VISIT(traverse_module_state->__pyx_n_s_uv_compare);
   Py_VISIT(traverse_module_state->__pyx_kp_s_uv_compare_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_u_x);
   Py_VISIT(traverse_module_state->__pyx_n_u_y);
-  Py_VISIT(traverse_module_state->__pyx_tuple_);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__2);
+  Py_VISIT(traverse_module_state->__pyx_tuple__2);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__3);
   return 0;
 }
 #endif
@@ -2135,30 +2165,36 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
-#define __pyx_n_s__3 __pyx_mstate_global->__pyx_n_s__3
+#define __pyx_kp_u_ __pyx_mstate_global->__pyx_kp_u_
+#define __pyx_n_s_Dict __pyx_mstate_global->__pyx_n_s_Dict
+#define __pyx_n_s_List __pyx_mstate_global->__pyx_n_s_List
+#define __pyx_n_s__4 __pyx_mstate_global->__pyx_n_s__4
 #define __pyx_n_s_a __pyx_mstate_global->__pyx_n_s_a
 #define __pyx_n_s_append __pyx_mstate_global->__pyx_n_s_append
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_b __pyx_mstate_global->__pyx_n_s_b
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
 #define __pyx_n_s_enumerate __pyx_mstate_global->__pyx_n_s_enumerate
+#define __pyx_n_s_import __pyx_mstate_global->__pyx_n_s_import
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
+#define __pyx_n_s_range __pyx_mstate_global->__pyx_n_s_range
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
+#define __pyx_n_s_typing __pyx_mstate_global->__pyx_n_s_typing
 #define __pyx_n_s_uv_compare __pyx_mstate_global->__pyx_n_s_uv_compare
 #define __pyx_kp_s_uv_compare_pyx __pyx_mstate_global->__pyx_kp_s_uv_compare_pyx
 #define __pyx_n_u_x __pyx_mstate_global->__pyx_n_u_x
 #define __pyx_n_u_y __pyx_mstate_global->__pyx_n_u_y
-#define __pyx_tuple_ __pyx_mstate_global->__pyx_tuple_
-#define __pyx_codeobj__2 __pyx_mstate_global->__pyx_codeobj__2
+#define __pyx_tuple__2 __pyx_mstate_global->__pyx_tuple__2
+#define __pyx_codeobj__3 __pyx_mstate_global->__pyx_codeobj__3
 /* #### Code section: module_code ### */
 
-/* "uv_compare.pyx":26
+/* "uv_compare.pyx":28
  *     double y
  * 
  * cdef point* create_point():             # <<<<<<<<<<<<<<
- *     cdef point * ex = <point *> malloc(sizeof(point))
+ *     cdef point * ex = <point *> malloc(20792 * sizeof(point))
  *     return ex
  */
 
@@ -2168,18 +2204,18 @@ static struct __pyx_t_10uv_compare_point *__pyx_f_10uv_compare_create_point(void
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("create_point", 0);
 
-  /* "uv_compare.pyx":27
+  /* "uv_compare.pyx":29
  * 
  * cdef point* create_point():
- *     cdef point * ex = <point *> malloc(sizeof(point))             # <<<<<<<<<<<<<<
+ *     cdef point * ex = <point *> malloc(20792 * sizeof(point))             # <<<<<<<<<<<<<<
  *     return ex
  * 
  */
-  __pyx_v_ex = ((struct __pyx_t_10uv_compare_point *)malloc((sizeof(struct __pyx_t_10uv_compare_point))));
+  __pyx_v_ex = ((struct __pyx_t_10uv_compare_point *)malloc((0x5138 * (sizeof(struct __pyx_t_10uv_compare_point)))));
 
-  /* "uv_compare.pyx":28
+  /* "uv_compare.pyx":30
  * cdef point* create_point():
- *     cdef point * ex = <point *> malloc(sizeof(point))
+ *     cdef point * ex = <point *> malloc(20792 * sizeof(point))
  *     return ex             # <<<<<<<<<<<<<<
  * 
  * cdef bint point_compare(dict[str, float] i, dict[str, float] j):
@@ -2187,11 +2223,11 @@ static struct __pyx_t_10uv_compare_point *__pyx_f_10uv_compare_create_point(void
   __pyx_r = __pyx_v_ex;
   goto __pyx_L0;
 
-  /* "uv_compare.pyx":26
+  /* "uv_compare.pyx":28
  *     double y
  * 
  * cdef point* create_point():             # <<<<<<<<<<<<<<
- *     cdef point * ex = <point *> malloc(sizeof(point))
+ *     cdef point * ex = <point *> malloc(20792 * sizeof(point))
  *     return ex
  */
 
@@ -2201,7 +2237,7 @@ static struct __pyx_t_10uv_compare_point *__pyx_f_10uv_compare_create_point(void
   return __pyx_r;
 }
 
-/* "uv_compare.pyx":30
+/* "uv_compare.pyx":32
  *     return ex
  * 
  * cdef bint point_compare(dict[str, float] i, dict[str, float] j):             # <<<<<<<<<<<<<<
@@ -2223,17 +2259,17 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("point_compare", 0);
 
-  /* "uv_compare.pyx":31
+  /* "uv_compare.pyx":33
  * 
  * cdef bint point_compare(dict[str, float] i, dict[str, float] j):
  *     cdef point* ex1 = create_point();             # <<<<<<<<<<<<<<
  *     ex1.x = i["x"]
  *     ex1.y = i["y"]
  */
-  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
   __pyx_v_ex1 = __pyx_t_1;
 
-  /* "uv_compare.pyx":32
+  /* "uv_compare.pyx":34
  * cdef bint point_compare(dict[str, float] i, dict[str, float] j):
  *     cdef point* ex1 = create_point();
  *     ex1.x = i["x"]             # <<<<<<<<<<<<<<
@@ -2242,15 +2278,15 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
  */
   if (unlikely(__pyx_v_i == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 32, __pyx_L1_error)
+    __PYX_ERR(0, 34, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_i, __pyx_n_u_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_i, __pyx_n_u_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_ex1->x = __pyx_t_3;
 
-  /* "uv_compare.pyx":33
+  /* "uv_compare.pyx":35
  *     cdef point* ex1 = create_point();
  *     ex1.x = i["x"]
  *     ex1.y = i["y"]             # <<<<<<<<<<<<<<
@@ -2259,25 +2295,25 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
  */
   if (unlikely(__pyx_v_i == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 33, __pyx_L1_error)
+    __PYX_ERR(0, 35, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_i, __pyx_n_u_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_i, __pyx_n_u_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_ex1->y = __pyx_t_3;
 
-  /* "uv_compare.pyx":34
+  /* "uv_compare.pyx":36
  *     ex1.x = i["x"]
  *     ex1.y = i["y"]
  *     cdef point * ex2 = create_point()             # <<<<<<<<<<<<<<
  *     ex2.x = j["x"]
  *     ex2.y = j["y"]
  */
-  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L1_error)
   __pyx_v_ex2 = __pyx_t_1;
 
-  /* "uv_compare.pyx":35
+  /* "uv_compare.pyx":37
  *     ex1.y = i["y"]
  *     cdef point * ex2 = create_point()
  *     ex2.x = j["x"]             # <<<<<<<<<<<<<<
@@ -2286,15 +2322,15 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
  */
   if (unlikely(__pyx_v_j == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 35, __pyx_L1_error)
+    __PYX_ERR(0, 37, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_j, __pyx_n_u_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_j, __pyx_n_u_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_ex2->x = __pyx_t_3;
 
-  /* "uv_compare.pyx":36
+  /* "uv_compare.pyx":38
  *     cdef point * ex2 = create_point()
  *     ex2.x = j["x"]
  *     ex2.y = j["y"]             # <<<<<<<<<<<<<<
@@ -2303,15 +2339,15 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
  */
   if (unlikely(__pyx_v_j == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 36, __pyx_L1_error)
+    __PYX_ERR(0, 38, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_j, __pyx_n_u_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_j, __pyx_n_u_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_ex2->y = __pyx_t_3;
 
-  /* "uv_compare.pyx":37
+  /* "uv_compare.pyx":39
  *     ex2.x = j["x"]
  *     ex2.y = j["y"]
  *     if memcmp(ex1, ex2, sizeof(point)) == 0:             # <<<<<<<<<<<<<<
@@ -2321,7 +2357,7 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
   __pyx_t_4 = (memcmp(__pyx_v_ex1, __pyx_v_ex2, (sizeof(struct __pyx_t_10uv_compare_point))) == 0);
   if (__pyx_t_4) {
 
-    /* "uv_compare.pyx":38
+    /* "uv_compare.pyx":40
  *     ex2.y = j["y"]
  *     if memcmp(ex1, ex2, sizeof(point)) == 0:
  *         return True             # <<<<<<<<<<<<<<
@@ -2331,7 +2367,7 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "uv_compare.pyx":37
+    /* "uv_compare.pyx":39
  *     ex2.x = j["x"]
  *     ex2.y = j["y"]
  *     if memcmp(ex1, ex2, sizeof(point)) == 0:             # <<<<<<<<<<<<<<
@@ -2340,7 +2376,7 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
  */
   }
 
-  /* "uv_compare.pyx":40
+  /* "uv_compare.pyx":42
  *         return True
  *     else:
  *         return False             # <<<<<<<<<<<<<<
@@ -2352,7 +2388,7 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
     goto __pyx_L0;
   }
 
-  /* "uv_compare.pyx":30
+  /* "uv_compare.pyx":32
  *     return ex
  * 
  * cdef bint point_compare(dict[str, float] i, dict[str, float] j):             # <<<<<<<<<<<<<<
@@ -2370,32 +2406,33 @@ static int __pyx_f_10uv_compare_point_compare(PyObject *__pyx_v_i, PyObject *__p
   return __pyx_r;
 }
 
-/* "uv_compare.pyx":49
+/* "uv_compare.pyx":51
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
- * cdef dict[str, int] _uv_compare(list[dict[str, float]] data1, list[dict[str, float]] data2):             # <<<<<<<<<<<<<<
- *     cdef dict[str, int] uv_data = {}
- *     cdef int count = 0
+ * cdef dict[str, int] _uv_compare(List[Dict[str, float]] data1, List[Dict[str, float]] data2):             # <<<<<<<<<<<<<<
+ *     data_1 = create_point()
+ *     data_2 = create_point()
  */
 
 static PyObject *__pyx_f_10uv_compare__uv_compare(PyObject *__pyx_v_data1, PyObject *__pyx_v_data2) {
-  PyObject *__pyx_v_uv_data = 0;
-  CYTHON_UNUSED int __pyx_v_count;
-  Py_ssize_t __pyx_v_index1;
+  struct __pyx_t_10uv_compare_point *__pyx_v_data_1;
+  struct __pyx_t_10uv_compare_point *__pyx_v_data_2;
+  Py_ssize_t __pyx_v_j;
   PyObject *__pyx_v_i = NULL;
-  Py_ssize_t __pyx_v_index2;
-  PyObject *__pyx_v_j = NULL;
+  PyObject *__pyx_v_uv_data = 0;
+  long __pyx_v_index1;
+  long __pyx_v_index2;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
+  struct __pyx_t_10uv_compare_point *__pyx_t_1;
   Py_ssize_t __pyx_t_2;
-  Py_ssize_t __pyx_t_3;
-  PyObject *__pyx_t_4 = NULL;
-  Py_ssize_t __pyx_t_5;
-  Py_ssize_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  int __pyx_t_8;
-  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  Py_ssize_t __pyx_t_4;
+  PyObject *__pyx_t_5 = NULL;
+  double __pyx_t_6;
+  long __pyx_t_7;
+  long __pyx_t_8;
+  int __pyx_t_9;
   int __pyx_t_10;
   PyObject *__pyx_t_11 = NULL;
   int __pyx_lineno = 0;
@@ -2403,185 +2440,268 @@ static PyObject *__pyx_f_10uv_compare__uv_compare(PyObject *__pyx_v_data1, PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_uv_compare", 0);
 
-  /* "uv_compare.pyx":50
- * @cython.wraparound(False)
- * cdef dict[str, int] _uv_compare(list[dict[str, float]] data1, list[dict[str, float]] data2):
- *     cdef dict[str, int] uv_data = {}             # <<<<<<<<<<<<<<
- *     cdef int count = 0
- *     for index1, i in enumerate(data1):
- */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_uv_data = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
-
-  /* "uv_compare.pyx":51
- * cdef dict[str, int] _uv_compare(list[dict[str, float]] data1, list[dict[str, float]] data2):
- *     cdef dict[str, int] uv_data = {}
- *     cdef int count = 0             # <<<<<<<<<<<<<<
- *     for index1, i in enumerate(data1):
- *         for index2, j in enumerate(data2):
- */
-  __pyx_v_count = 0;
-
   /* "uv_compare.pyx":52
- *     cdef dict[str, int] uv_data = {}
- *     cdef int count = 0
- *     for index1, i in enumerate(data1):             # <<<<<<<<<<<<<<
- *         for index2, j in enumerate(data2):
- *             if point_compare(i, j):
+ * @cython.wraparound(False)
+ * cdef dict[str, int] _uv_compare(List[Dict[str, float]] data1, List[Dict[str, float]] data2):
+ *     data_1 = create_point()             # <<<<<<<<<<<<<<
+ *     data_2 = create_point()
+ *     for j, i in enumerate(data1):
+ */
+  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_v_data_1 = __pyx_t_1;
+
+  /* "uv_compare.pyx":53
+ * cdef dict[str, int] _uv_compare(List[Dict[str, float]] data1, List[Dict[str, float]] data2):
+ *     data_1 = create_point()
+ *     data_2 = create_point()             # <<<<<<<<<<<<<<
+ *     for j, i in enumerate(data1):
+ *         data_1[j].x = i["x"]
+ */
+  __pyx_t_1 = __pyx_f_10uv_compare_create_point(); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_v_data_2 = __pyx_t_1;
+
+  /* "uv_compare.pyx":54
+ *     data_1 = create_point()
+ *     data_2 = create_point()
+ *     for j, i in enumerate(data1):             # <<<<<<<<<<<<<<
+ *         data_1[j].x = i["x"]
+ *         data_1[j].y = i["y"]
  */
   __pyx_t_2 = 0;
-  __pyx_t_1 = __pyx_v_data1; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
+  __pyx_t_3 = __pyx_v_data1; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
   for (;;) {
-    if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely((0 < 0))) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_5); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 54, __pyx_L1_error)
     #else
-    __pyx_t_4 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
     #endif
-    __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_4);
-    __pyx_t_4 = 0;
-    __pyx_v_index1 = __pyx_t_2;
+    __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_5);
+    __pyx_t_5 = 0;
+    __pyx_v_j = __pyx_t_2;
     __pyx_t_2 = (__pyx_t_2 + 1);
 
-    /* "uv_compare.pyx":53
- *     cdef int count = 0
- *     for index1, i in enumerate(data1):
- *         for index2, j in enumerate(data2):             # <<<<<<<<<<<<<<
- *             if point_compare(i, j):
- *             # if i == j:
+    /* "uv_compare.pyx":55
+ *     data_2 = create_point()
+ *     for j, i in enumerate(data1):
+ *         data_1[j].x = i["x"]             # <<<<<<<<<<<<<<
+ *         data_1[j].y = i["y"]
+ * 
  */
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_v_i, __pyx_n_u_x); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 55, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 55, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    (__pyx_v_data_1[__pyx_v_j]).x = __pyx_t_6;
+
+    /* "uv_compare.pyx":56
+ *     for j, i in enumerate(data1):
+ *         data_1[j].x = i["x"]
+ *         data_1[j].y = i["y"]             # <<<<<<<<<<<<<<
+ * 
+ *     for j, i in enumerate(data2):
+ */
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_v_i, __pyx_n_u_y); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 56, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    (__pyx_v_data_1[__pyx_v_j]).y = __pyx_t_6;
+
+    /* "uv_compare.pyx":54
+ *     data_1 = create_point()
+ *     data_2 = create_point()
+ *     for j, i in enumerate(data1):             # <<<<<<<<<<<<<<
+ *         data_1[j].x = i["x"]
+ *         data_1[j].y = i["y"]
+ */
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "uv_compare.pyx":58
+ *         data_1[j].y = i["y"]
+ * 
+ *     for j, i in enumerate(data2):             # <<<<<<<<<<<<<<
+ *         data_2[j].x = i["x"]
+ *         data_2[j].y = i["y"]
+ */
+  __pyx_t_2 = 0;
+  __pyx_t_3 = __pyx_v_data2; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+  for (;;) {
+    if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+    #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+    __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_5); __pyx_t_4++; if (unlikely((0 < 0))) __PYX_ERR(0, 58, __pyx_L1_error)
+    #else
+    __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    #endif
+    __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_4 = __pyx_v_data2; __Pyx_INCREF(__pyx_t_4); __pyx_t_6 = 0;
-    for (;;) {
-      if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_4)) break;
-      #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_7 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_7); __pyx_t_6++; if (unlikely((0 < 0))) __PYX_ERR(0, 53, __pyx_L1_error)
-      #else
-      __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 53, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_7);
-      #endif
-      __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_7);
-      __pyx_t_7 = 0;
-      __pyx_v_index2 = __pyx_t_5;
-      __pyx_t_5 = (__pyx_t_5 + 1);
+    __pyx_v_j = __pyx_t_2;
+    __pyx_t_2 = (__pyx_t_2 + 1);
 
-      /* "uv_compare.pyx":54
- *     for index1, i in enumerate(data1):
- *         for index2, j in enumerate(data2):
- *             if point_compare(i, j):             # <<<<<<<<<<<<<<
- *             # if i == j:
- *             # if i["x"] == j["x"] and i["y"] == j["y"]:
+    /* "uv_compare.pyx":59
+ * 
+ *     for j, i in enumerate(data2):
+ *         data_2[j].x = i["x"]             # <<<<<<<<<<<<<<
+ *         data_2[j].y = i["y"]
+ * 
  */
-      if (!(likely(PyDict_CheckExact(__pyx_v_i))||((__pyx_v_i) == Py_None) || __Pyx_RaiseUnexpectedTypeError("dict", __pyx_v_i))) __PYX_ERR(0, 54, __pyx_L1_error)
-      if (!(likely(PyDict_CheckExact(__pyx_v_j))||((__pyx_v_j) == Py_None) || __Pyx_RaiseUnexpectedTypeError("dict", __pyx_v_j))) __PYX_ERR(0, 54, __pyx_L1_error)
-      __pyx_t_8 = __pyx_f_10uv_compare_point_compare(((PyObject*)__pyx_v_i), ((PyObject*)__pyx_v_j)); if (unlikely(__pyx_t_8 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 54, __pyx_L1_error)
-      if (__pyx_t_8) {
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_v_i, __pyx_n_u_x); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 59, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    (__pyx_v_data_2[__pyx_v_j]).x = __pyx_t_6;
 
-        /* "uv_compare.pyx":57
- *             # if i == j:
- *             # if i["x"] == j["x"] and i["y"] == j["y"]:
+    /* "uv_compare.pyx":60
+ *     for j, i in enumerate(data2):
+ *         data_2[j].x = i["x"]
+ *         data_2[j].y = i["y"]             # <<<<<<<<<<<<<<
+ * 
+ *     cdef Dict[str, int] uv_data = {}
+ */
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_v_i, __pyx_n_u_y); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_5); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    (__pyx_v_data_2[__pyx_v_j]).y = __pyx_t_6;
+
+    /* "uv_compare.pyx":58
+ *         data_1[j].y = i["y"]
+ * 
+ *     for j, i in enumerate(data2):             # <<<<<<<<<<<<<<
+ *         data_2[j].x = i["x"]
+ *         data_2[j].y = i["y"]
+ */
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "uv_compare.pyx":62
+ *         data_2[j].y = i["y"]
+ * 
+ *     cdef Dict[str, int] uv_data = {}             # <<<<<<<<<<<<<<
+ * 
+ *     for index1 in range(20792):
+ */
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_v_uv_data = ((PyObject*)__pyx_t_3);
+  __pyx_t_3 = 0;
+
+  /* "uv_compare.pyx":64
+ *     cdef Dict[str, int] uv_data = {}
+ * 
+ *     for index1 in range(20792):             # <<<<<<<<<<<<<<
+ *         for index2 in range(20792):
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:
+ */
+  for (__pyx_t_7 = 0; __pyx_t_7 < 0x5138; __pyx_t_7+=1) {
+    __pyx_v_index1 = __pyx_t_7;
+
+    /* "uv_compare.pyx":65
+ * 
+ *     for index1 in range(20792):
+ *         for index2 in range(20792):             # <<<<<<<<<<<<<<
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:
+ *                 if index1 in uv_data:
+ */
+    for (__pyx_t_8 = 0; __pyx_t_8 < 0x5138; __pyx_t_8+=1) {
+      __pyx_v_index2 = __pyx_t_8;
+
+      /* "uv_compare.pyx":66
+ *     for index1 in range(20792):
+ *         for index2 in range(20792):
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:             # <<<<<<<<<<<<<<
+ *                 if index1 in uv_data:
+ *                     uv_data[str(index1)].append(index2)
+ */
+      __pyx_t_9 = (memcmp((&(__pyx_v_data_1[__pyx_v_index1])), (&(__pyx_v_data_2[__pyx_v_index2])), (sizeof(struct __pyx_t_10uv_compare_point))) == 0);
+      if (__pyx_t_9) {
+
+        /* "uv_compare.pyx":67
+ *         for index2 in range(20792):
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:
  *                 if index1 in uv_data:             # <<<<<<<<<<<<<<
  *                     uv_data[str(index1)].append(index2)
  *                 else:
  */
-        __pyx_t_7 = PyInt_FromSsize_t(__pyx_v_index1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_8 = (__Pyx_PyDict_ContainsTF(__pyx_t_7, __pyx_v_uv_data, Py_EQ)); if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 57, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (__pyx_t_8) {
+        __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_index1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 67, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
+        __pyx_t_9 = (__Pyx_PyDict_ContainsTF(__pyx_t_3, __pyx_v_uv_data, Py_EQ)); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 67, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+        if (__pyx_t_9) {
 
-          /* "uv_compare.pyx":58
- *             # if i["x"] == j["x"] and i["y"] == j["y"]:
+          /* "uv_compare.pyx":68
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:
  *                 if index1 in uv_data:
  *                     uv_data[str(index1)].append(index2)             # <<<<<<<<<<<<<<
  *                 else:
  *                     uv_data[str(index1)] = [index2]
  */
-          __pyx_t_7 = PyInt_FromSsize_t(__pyx_v_index1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_7);
-          __pyx_t_9 = __Pyx_PyObject_Str(__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_9);
-          __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyDict_GetItem(__pyx_v_uv_data, __pyx_t_9); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_7);
-          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-          __pyx_t_9 = PyInt_FromSsize_t(__pyx_v_index2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_9);
-          __pyx_t_10 = __Pyx_PyObject_Append(__pyx_t_7, __pyx_t_9); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 58, __pyx_L1_error)
-          __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+          __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_index1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
+          __pyx_t_5 = __Pyx_PyObject_Str(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_5);
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+          __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_uv_data, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
+          __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+          __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_index2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 68, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_5);
+          __pyx_t_10 = __Pyx_PyObject_Append(__pyx_t_3, __pyx_t_5); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 68, __pyx_L1_error)
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+          __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "uv_compare.pyx":57
- *             # if i == j:
- *             # if i["x"] == j["x"] and i["y"] == j["y"]:
+          /* "uv_compare.pyx":67
+ *         for index2 in range(20792):
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:
  *                 if index1 in uv_data:             # <<<<<<<<<<<<<<
  *                     uv_data[str(index1)].append(index2)
  *                 else:
  */
-          goto __pyx_L8;
+          goto __pyx_L14;
         }
 
-        /* "uv_compare.pyx":60
+        /* "uv_compare.pyx":70
  *                     uv_data[str(index1)].append(index2)
  *                 else:
  *                     uv_data[str(index1)] = [index2]             # <<<<<<<<<<<<<<
- *     # for i in range(20792):
- *     #     for j in range(20792):
+ * 
+ * 
  */
         /*else*/ {
-          __pyx_t_9 = PyInt_FromSsize_t(__pyx_v_index2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_9);
-          __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 60, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_7);
-          __Pyx_GIVEREF(__pyx_t_9);
-          PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_9);
-          __pyx_t_9 = 0;
-          __pyx_t_9 = PyInt_FromSsize_t(__pyx_v_index1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_9);
-          __pyx_t_11 = __Pyx_PyObject_Str(__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 60, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_index2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_5);
+          __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
+          __Pyx_GIVEREF(__pyx_t_5);
+          PyList_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
+          __pyx_t_5 = 0;
+          __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_index1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_5);
+          __pyx_t_11 = __Pyx_PyObject_Str(__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 70, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
-          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-          if (unlikely((PyDict_SetItem(__pyx_v_uv_data, __pyx_t_11, __pyx_t_7) < 0))) __PYX_ERR(0, 60, __pyx_L1_error)
+          __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+          if (unlikely((PyDict_SetItem(__pyx_v_uv_data, __pyx_t_11, __pyx_t_3) < 0))) __PYX_ERR(0, 70, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-          __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         }
-        __pyx_L8:;
+        __pyx_L14:;
 
-        /* "uv_compare.pyx":54
- *     for index1, i in enumerate(data1):
- *         for index2, j in enumerate(data2):
- *             if point_compare(i, j):             # <<<<<<<<<<<<<<
- *             # if i == j:
- *             # if i["x"] == j["x"] and i["y"] == j["y"]:
+        /* "uv_compare.pyx":66
+ *     for index1 in range(20792):
+ *         for index2 in range(20792):
+ *             if memcmp(&data_1[index1], &data_2[index2], sizeof(point))==0:             # <<<<<<<<<<<<<<
+ *                 if index1 in uv_data:
+ *                     uv_data[str(index1)].append(index2)
  */
       }
-
-      /* "uv_compare.pyx":53
- *     cdef int count = 0
- *     for index1, i in enumerate(data1):
- *         for index2, j in enumerate(data2):             # <<<<<<<<<<<<<<
- *             if point_compare(i, j):
- *             # if i == j:
- */
     }
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-    /* "uv_compare.pyx":52
- *     cdef dict[str, int] uv_data = {}
- *     cdef int count = 0
- *     for index1, i in enumerate(data1):             # <<<<<<<<<<<<<<
- *         for index2, j in enumerate(data2):
- *             if point_compare(i, j):
- */
   }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "uv_compare.pyx":65
- *     #         if i == j:
- *     #             count += 1
+  /* "uv_compare.pyx":84
+ *     #             else:
+ *     #                 uv_data[str(index1)] = [index2]
  *     return uv_data             # <<<<<<<<<<<<<<
  * 
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
@@ -2591,33 +2711,30 @@ static PyObject *__pyx_f_10uv_compare__uv_compare(PyObject *__pyx_v_data1, PyObj
   __pyx_r = __pyx_v_uv_data;
   goto __pyx_L0;
 
-  /* "uv_compare.pyx":49
+  /* "uv_compare.pyx":51
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
- * cdef dict[str, int] _uv_compare(list[dict[str, float]] data1, list[dict[str, float]] data2):             # <<<<<<<<<<<<<<
- *     cdef dict[str, int] uv_data = {}
- *     cdef int count = 0
+ * cdef dict[str, int] _uv_compare(List[Dict[str, float]] data1, List[Dict[str, float]] data2):             # <<<<<<<<<<<<<<
+ *     data_1 = create_point()
+ *     data_2 = create_point()
  */
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_AddTraceback("uv_compare._uv_compare", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_uv_data);
   __Pyx_XDECREF(__pyx_v_i);
-  __Pyx_XDECREF(__pyx_v_j);
+  __Pyx_XDECREF(__pyx_v_uv_data);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "uv_compare.pyx":68
+/* "uv_compare.pyx":87
  * 
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
  * def uv_compare(a, b):             # <<<<<<<<<<<<<<
@@ -2669,19 +2786,19 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       switch (__pyx_nargs) {
         case  0:
         if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_a)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 68, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_b)) != 0)) kw_args--;
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 68, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("uv_compare", 1, 2, 2, 1); __PYX_ERR(0, 68, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("uv_compare", 1, 2, 2, 1); __PYX_ERR(0, 87, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "uv_compare") < 0)) __PYX_ERR(0, 68, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "uv_compare") < 0)) __PYX_ERR(0, 87, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -2694,7 +2811,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("uv_compare", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 68, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("uv_compare", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 87, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("uv_compare.uv_compare", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2716,21 +2833,21 @@ static PyObject *__pyx_pf_10uv_compare_uv_compare(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("uv_compare", 0);
 
-  /* "uv_compare.pyx":69
+  /* "uv_compare.pyx":88
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
  * def uv_compare(a, b):
  *     return _uv_compare(a, b)             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyList_CheckExact(__pyx_v_a))||((__pyx_v_a) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_a))) __PYX_ERR(0, 69, __pyx_L1_error)
-  if (!(likely(PyList_CheckExact(__pyx_v_b))||((__pyx_v_b) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_b))) __PYX_ERR(0, 69, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_10uv_compare__uv_compare(((PyObject*)__pyx_v_a), ((PyObject*)__pyx_v_b)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_v_a))||((__pyx_v_a) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_a))) __PYX_ERR(0, 88, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_v_b))||((__pyx_v_b) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_v_b))) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10uv_compare__uv_compare(((PyObject*)__pyx_v_a), ((PyObject*)__pyx_v_b)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "uv_compare.pyx":68
+  /* "uv_compare.pyx":87
  * 
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
  * def uv_compare(a, b):             # <<<<<<<<<<<<<<
@@ -2764,17 +2881,23 @@ static PyMethodDef __pyx_methods[] = {
 
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
-    {&__pyx_n_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 1},
+    {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
+    {&__pyx_n_s_Dict, __pyx_k_Dict, sizeof(__pyx_k_Dict), 0, 0, 1, 1},
+    {&__pyx_n_s_List, __pyx_k_List, sizeof(__pyx_k_List), 0, 0, 1, 1},
+    {&__pyx_n_s__4, __pyx_k__4, sizeof(__pyx_k__4), 0, 0, 1, 1},
     {&__pyx_n_s_a, __pyx_k_a, sizeof(__pyx_k_a), 0, 0, 1, 1},
     {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_b, __pyx_k_b, sizeof(__pyx_k_b), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
     {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
+    {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
+    {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+    {&__pyx_n_s_typing, __pyx_k_typing, sizeof(__pyx_k_typing), 0, 0, 1, 1},
     {&__pyx_n_s_uv_compare, __pyx_k_uv_compare, sizeof(__pyx_k_uv_compare), 0, 0, 1, 1},
     {&__pyx_kp_s_uv_compare_pyx, __pyx_k_uv_compare_pyx, sizeof(__pyx_k_uv_compare_pyx), 0, 0, 1, 0},
     {&__pyx_n_u_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 1, 0, 1},
@@ -2785,7 +2908,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 64, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -2796,16 +2920,16 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "uv_compare.pyx":68
+  /* "uv_compare.pyx":87
  * 
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
  * def uv_compare(a, b):             # <<<<<<<<<<<<<<
  *     return _uv_compare(a, b)
  */
-  __pyx_tuple_ = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_b); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 68, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple_);
-  __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_uv_compare_pyx, __pyx_n_s_uv_compare, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_b); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__2);
+  __Pyx_GIVEREF(__pyx_tuple__2);
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_uv_compare_pyx, __pyx_n_s_uv_compare, 87, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 87, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3054,6 +3178,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_uv_compare(PyObject *__pyx_pyinit_
   #endif
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -3171,32 +3296,61 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "uv_compare.pyx":68
+  /* "uv_compare.pyx":5
+ * from libc.string cimport memcmp
+ * from libc.stdlib cimport malloc
+ * from typing import List, Dict             # <<<<<<<<<<<<<<
+ * 
+ * # cimport  Cython  .pxd
+ */
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_INCREF(__pyx_n_s_List);
+  __Pyx_GIVEREF(__pyx_n_s_List);
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_List);
+  __Pyx_INCREF(__pyx_n_s_Dict);
+  __Pyx_GIVEREF(__pyx_n_s_Dict);
+  PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_Dict);
+  __pyx_t_3 = __Pyx_Import(__pyx_n_s_typing, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_List); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_List, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_Dict); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Dict, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "uv_compare.pyx":87
  * 
  * #  Python  cdef  def uv_compare(a, b)  cdef  _uv_compare
  * def uv_compare(a, b):             # <<<<<<<<<<<<<<
  *     return _uv_compare(a, b)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_10uv_compare_1uv_compare, 0, __pyx_n_s_uv_compare, NULL, __pyx_n_s_uv_compare, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uv_compare, __pyx_t_2) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_10uv_compare_1uv_compare, 0, __pyx_n_s_uv_compare, NULL, __pyx_n_s_uv_compare, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_uv_compare, __pyx_t_3) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "uv_compare.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * cimport cython
  * from libc.string cimport memcmp
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_3) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /*--- Wrapped vars code ---*/
 
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
       __Pyx_AddTraceback("init uv_compare", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -3433,17 +3587,6 @@ static PyObject *__Pyx_PyDict_GetItem(PyObject *d, PyObject* key) {
     return value;
 }
 #endif
-
-/* RaiseUnexpectedTypeError */
-static int
-__Pyx_RaiseUnexpectedTypeError(const char *expected, PyObject *obj)
-{
-    __Pyx_TypeName obj_type_name = __Pyx_PyType_GetName(Py_TYPE(obj));
-    PyErr_Format(PyExc_TypeError, "Expected %s, got " __Pyx_FMT_TYPENAME,
-                 expected, obj_type_name);
-    __Pyx_DECREF_TypeName(obj_type_name);
-    return 0;
-}
 
 /* PyFunctionFastCall */
 #if CYTHON_FAST_PYCALL && !CYTHON_VECTORCALL
@@ -4184,6 +4327,128 @@ invalid_keyword:
     #endif
 bad:
     return -1;
+}
+
+/* RaiseUnexpectedTypeError */
+static int
+__Pyx_RaiseUnexpectedTypeError(const char *expected, PyObject *obj)
+{
+    __Pyx_TypeName obj_type_name = __Pyx_PyType_GetName(Py_TYPE(obj));
+    PyErr_Format(PyExc_TypeError, "Expected %s, got " __Pyx_FMT_TYPENAME,
+                 expected, obj_type_name);
+    __Pyx_DECREF_TypeName(obj_type_name);
+    return 0;
+}
+
+/* Import */
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
+    PyObject *module = 0;
+    PyObject *empty_dict = 0;
+    PyObject *empty_list = 0;
+    #if PY_MAJOR_VERSION < 3
+    PyObject *py_import;
+    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
+    if (unlikely(!py_import))
+        goto bad;
+    if (!from_list) {
+        empty_list = PyList_New(0);
+        if (unlikely(!empty_list))
+            goto bad;
+        from_list = empty_list;
+    }
+    #endif
+    empty_dict = PyDict_New();
+    if (unlikely(!empty_dict))
+        goto bad;
+    {
+        #if PY_MAJOR_VERSION >= 3
+        if (level == -1) {
+            if ((1) && (strchr(__Pyx_MODULE_NAME, '.'))) {
+                #if CYTHON_COMPILING_IN_LIMITED_API
+                module = PyImport_ImportModuleLevelObject(
+                    name, empty_dict, empty_dict, from_list, 1);
+                #else
+                module = PyImport_ImportModuleLevelObject(
+                    name, __pyx_d, empty_dict, from_list, 1);
+                #endif
+                if (unlikely(!module)) {
+                    if (unlikely(!PyErr_ExceptionMatches(PyExc_ImportError)))
+                        goto bad;
+                    PyErr_Clear();
+                }
+            }
+            level = 0;
+        }
+        #endif
+        if (!module) {
+            #if PY_MAJOR_VERSION < 3
+            PyObject *py_level = PyInt_FromLong(level);
+            if (unlikely(!py_level))
+                goto bad;
+            module = PyObject_CallFunctionObjArgs(py_import,
+                name, __pyx_d, empty_dict, from_list, py_level, (PyObject *)NULL);
+            Py_DECREF(py_level);
+            #else
+            #if CYTHON_COMPILING_IN_LIMITED_API
+            module = PyImport_ImportModuleLevelObject(
+                name, empty_dict, empty_dict, from_list, level);
+            #else
+            module = PyImport_ImportModuleLevelObject(
+                name, __pyx_d, empty_dict, from_list, level);
+            #endif
+            #endif
+        }
+    }
+bad:
+    Py_XDECREF(empty_dict);
+    Py_XDECREF(empty_list);
+    #if PY_MAJOR_VERSION < 3
+    Py_XDECREF(py_import);
+    #endif
+    return module;
+}
+
+/* ImportFrom */
+static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
+    PyObject* value = __Pyx_PyObject_GetAttrStr(module, name);
+    if (unlikely(!value) && PyErr_ExceptionMatches(PyExc_AttributeError)) {
+        const char* module_name_str = 0;
+        PyObject* module_name = 0;
+        PyObject* module_dot = 0;
+        PyObject* full_name = 0;
+        PyErr_Clear();
+        module_name_str = PyModule_GetName(module);
+        if (unlikely(!module_name_str)) { goto modbad; }
+        module_name = PyUnicode_FromString(module_name_str);
+        if (unlikely(!module_name)) { goto modbad; }
+        module_dot = PyUnicode_Concat(module_name, __pyx_kp_u_);
+        if (unlikely(!module_dot)) { goto modbad; }
+        full_name = PyUnicode_Concat(module_dot, name);
+        if (unlikely(!full_name)) { goto modbad; }
+        #if PY_VERSION_HEX < 0x030700A1 || (CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM  < 0x07030400)
+        {
+            PyObject *modules = PyImport_GetModuleDict();
+            if (unlikely(!modules))
+                goto modbad;
+            value = PyObject_GetItem(modules, full_name);
+        }
+        #else
+        value = PyImport_GetModule(full_name);
+        #endif
+      modbad:
+        Py_XDECREF(full_name);
+        Py_XDECREF(module_dot);
+        Py_XDECREF(module_name);
+    }
+    if (unlikely(!value)) {
+        PyErr_Format(PyExc_ImportError,
+        #if PY_MAJOR_VERSION < 3
+            "cannot import name %.230s", PyString_AS_STRING(name));
+        #else
+            "cannot import name %S", name);
+        #endif
+    }
+    return value;
 }
 
 /* FixUpExtensionType */
@@ -5578,59 +5843,6 @@ bad:
 }
 #endif
 
-/* FormatTypeName */
-#if CYTHON_COMPILING_IN_LIMITED_API
-static __Pyx_TypeName
-__Pyx_PyType_GetName(PyTypeObject* tp)
-{
-    PyObject *name = __Pyx_PyObject_GetAttrStr((PyObject *)tp,
-                                               __pyx_n_s_name);
-    if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
-        PyErr_Clear();
-        Py_XSETREF(name, __Pyx_NewRef(__pyx_n_s__3));
-    }
-    return name;
-}
-#endif
-
-/* CIntToPy */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
-#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wconversion"
-#endif
-    const long neg_one = (long) -1, const_zero = (long) 0;
-#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
-#pragma GCC diagnostic pop
-#endif
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(long) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
-            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
-#endif
-        }
-    } else {
-        if (sizeof(long) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
-            return PyLong_FromLongLong((PY_LONG_LONG) value);
-#endif
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(long),
-                                     little, !is_unsigned);
-    }
-}
-
 /* CIntFromPyVerify */
 #define __PYX_VERIFY_RETURN_INT(target_type, func_type, func_value)\
     __PYX__VERIFY_RETURN_INT(target_type, func_type, func_value, 0)
@@ -5925,6 +6137,59 @@ raise_neg_overflow:
         "can't convert negative value to long");
     return (long) -1;
 }
+
+/* CIntToPy */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+#endif
+    const long neg_one = (long) -1, const_zero = (long) 0;
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic pop
+#endif
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(long) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
+            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
+#endif
+        }
+    } else {
+        if (sizeof(long) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
+            return PyLong_FromLongLong((PY_LONG_LONG) value);
+#endif
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(long),
+                                     little, !is_unsigned);
+    }
+}
+
+/* FormatTypeName */
+#if CYTHON_COMPILING_IN_LIMITED_API
+static __Pyx_TypeName
+__Pyx_PyType_GetName(PyTypeObject* tp)
+{
+    PyObject *name = __Pyx_PyObject_GetAttrStr((PyObject *)tp,
+                                               __pyx_n_s_name);
+    if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
+        PyErr_Clear();
+        Py_XSETREF(name, __Pyx_NewRef(__pyx_n_s__4));
+    }
+    return name;
+}
+#endif
 
 /* CIntFromPy */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {

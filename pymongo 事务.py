@@ -2,13 +2,18 @@ import time
 
 from pymongo import MongoClient
 
-url = "mongodb://facemodelapi:123456@10.25.10.132:27017, 10.25.10.22:27017/facemodelapi?replicaSet=rs0&authSource=facemodelapi&serverSelectionTimeoutMS=5000"
+url = "mongodb://facemodelapi:123456@10.25.10.132:30001,10.25.10.132:30002,10.25.10.132:30003/facemodelapi?replicaSet=rs1&authSource=facemodelapi&serverSelectionTimeoutMS=5000"
 # url = "mongodb://facemodelapi:123456@10.25.20.15:27017/facemodelapi?authSource=facemodelapi&serverSelectionTimeoutMS=5000"
 
-client = MongoClient(url)
-client.read_preference = MongoClient.SECONDARY
-print(client.is_mongos)
-print(client.is_primary)
+client = MongoClient(url, readPreference="secondaryPreferred")
+#primary:默认参数，只从主节点上进行读取操作；
+#primaryPreferred:大部分从主节点上读取数据,只有主节点不可用时从secondary节点读取数据。
+#secondary:只从secondary节点上进行读取操作，存在的问题是secondary节点的数据会比primary节点数据“旧”。
+#secondaryPreferred:优先从secondary节点进行读取操作，secondary节点不可用时从主节点读取数据；
+#nearest:不管是主节点、secondary节点，从网络延迟最低的节点上读取数据。
+
+# print(client.is_mongos)
+# print(client.is_primary)
 collection = client["facemodelapi"]["student"]
 
 session = client.start_session(causal_consistency=True)
@@ -26,7 +31,7 @@ try:
     collection.insert_one({'0': '正常插入数据'}, session=session)
 
     # 异常插入数据
-    collection.insert_one({0: '异常插入数据'}, session=session)
+    # collection.insert_one({0: '异常插入数据'}, session=session)
 
     # 抛出一个错误
     # raise ValueError('抛出一个错误')

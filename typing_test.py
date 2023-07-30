@@ -22,7 +22,7 @@ from typing import List
 
 # 参数names为list类型并且元素都是str类型
 # 返回为None
-def greet_all(names: List[str]) -> None:
+def greet_all(names: List[Dict[int, str]]) -> None:
     for name in names:
         print('Hello ' + name)
 
