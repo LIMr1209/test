@@ -30,7 +30,7 @@ cdef point* create_point():
     return ex
 
 
-# 4秒
+# 0.2 秒
 # 两个修饰符用来关闭 Cython 的边界检查
 @cython.boundscheck(False)
 @cython.wraparound(False)

@@ -29,9 +29,10 @@ try:
     collection.delete_one({"world": 100}, session=session)
     # 正常插入数据
     collection.insert_one({'0': '正常插入数据'}, session=session)
+    collection.insert_one({"12312": '正常插入数据'})
 
     # 异常插入数据
-    # collection.insert_one({0: '异常插入数据'}, session=session)
+    collection.insert_one({0: '异常插入数据'}, session=session)
 
     # 抛出一个错误
     # raise ValueError('抛出一个错误')
