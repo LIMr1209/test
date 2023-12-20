@@ -12,10 +12,10 @@ import urllib3
 from requests import Session
 
 session = Session()
-session.proxies = {
-        'http': 'http://127.0.0.1:7890',
-        'https': 'http://127.0.0.1:7890'
-    }
+# session.proxies = {
+#         'http': 'http://127.0.0.1:7890',
+#         'https': 'http://127.0.0.1:7890'
+#     }
 
 urllib3.disable_warnings()
 
@@ -102,7 +102,8 @@ layers = resp.json()['layers']
 
 # Create tmp folder that will hold the image
 imgdir = 'tmp_{}_{}'.format(img, tag.replace(':', '@'))
-os.mkdir(imgdir)
+if not os.path.exists(imgdir):
+    os.mkdir(imgdir)
 print('Creating image structure in: ' + imgdir)
 
 config = resp.json()['config']['digest']
@@ -133,6 +134,9 @@ for layer in layers:
     # FIXME: Creating fake layer ID. Don't know how Docker generates it
     fake_layerid = hashlib.sha256((parentid + '\n' + ublob + '\n').encode('utf-8')).hexdigest()
     layerdir = imgdir + '/' + fake_layerid
+    print(layerdir)
+    if os.path.exists(layerdir):
+        continue
     os.mkdir(layerdir)
 
     # Creating VERSION file
