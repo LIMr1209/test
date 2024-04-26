@@ -145,7 +145,7 @@ def fetch_blob(docker_image, auth, manifest):
     return resp.json()
 
 
-def download_layer_blob(docker_image, auth, layer, layerdir):
+def download_layer_blob(docker_image, auth, layer, layerdir, c, a):
     """
     下载 manifest 的 layer 文件
     """
@@ -189,7 +189,7 @@ def download_layer_blob(docker_image, auth, layer, layerdir):
     unit = int(bresp.headers['Content-Length']) / 50
     acc = 0
     nb_traits = 0
-    progress_bar(blob_digest, nb_traits)
+    progress_bar(blob_digest, nb_traits, c, a)
     # 保存 layer
     with open(layer_filename, open_flag) as fp:
         for chunk in bresp.iter_content(chunk_size=8192):
@@ -198,7 +198,7 @@ def download_layer_blob(docker_image, auth, layer, layerdir):
                 acc = acc + 8192
                 if acc > unit:
                     nb_traits = nb_traits + 1
-                    progress_bar(blob_digest, nb_traits)
+                    progress_bar(blob_digest, nb_traits, c, a)
                     acc = 0
 
     sys.stdout.flush()
@@ -217,7 +217,7 @@ def create_image_folder(docker_image):
     return imgdir
 
 
-def progress_bar(digest, nb_traits):
+def progress_bar(digest, nb_traits, c, a):
     """
     显示下载进度条
     """
@@ -229,7 +229,7 @@ def progress_bar(digest, nb_traits):
             sys.stdout.write('=')
     for i in range(0, 49 - nb_traits):
         sys.stdout.write(' ')
-    sys.stdout.write(']')
+    sys.stdout.write(f'] {c}/{a}')
     sys.stdout.flush()
 
 
@@ -248,6 +248,12 @@ def decompress_all_layers(all_layer_dirs):
             shutil.copyfileobj(unzLayer, fp)
             unzLayer.close()
         # 解压之后删除 gzip 文件
+        # os.remove(gzip_file)
+
+
+def remove_tar(all_layer_dirs):
+    for layerdir in all_layer_dirs:
+        gzip_file = os.path.join(layerdir, 'layer_gzip.tar')
         os.remove(gzip_file)
 
 
@@ -269,7 +275,8 @@ def pull_image(docker_image, auth, manifest, blob):
     i = 1
     fake_layerid = ''
     all_layers = []
-    for layer in manifest['layers']:
+    a = len(manifest['layers'])
+    for c, layer in enumerate(manifest['layers']):
         blob_digest = layer['digest']
         fake_layerid = hashlib.sha256((parentid+'\n'+blob_digest+'\n').encode('utf-8')).hexdigest()
         layerdir = os.path.join(imgdir, fake_layerid)
@@ -280,7 +287,7 @@ def pull_image(docker_image, auth, manifest, blob):
         with open(os.path.join(layerdir, 'VERSION'), 'w') as fp:
             fp.write('1.0')
 
-        download_layer_blob(docker_image, auth, layer, layerdir)
+        download_layer_blob(docker_image, auth, layer, layerdir, c+1, a)
         content[0]['Layers'].append(os.path.join(fake_layerid, 'layer.tar'))
         # 在 layer tar 目录下创建一个 json 文件 =======================
         with open(os.path.join(layerdir, 'json'), 'w') as fp:
@@ -326,6 +333,7 @@ def pull_image(docker_image, auth, manifest, blob):
 
     # 解压 gzip 文件为 tar 文件 =======================================
     decompress_all_layers(all_layers)
+    remove_tar(all_layers)
     # 创建 manifest 文件
     with open(os.path.join(imgdir, 'manifest.json'), 'w') as fp:
         json.dump(content, fp, indent=2)
